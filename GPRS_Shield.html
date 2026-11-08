@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="de" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Antrax GPS/GSM/GPRS Shield – Mikrocontroller.net</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":[",\t.",".\t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"],"wgRequestId":"c1c0e6df5fe9c30de776d233","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Antrax_GPS/GSM/GPRS_Shield","wgTitle":"Antrax GPS/GSM/GPRS Shield","wgCurRevisionId":96443,"wgRevisionId":96443,"wgArticleId":7451,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wettbewerb","AVR-Projekte","GPS","AVR-Boards"],"wgPageContentLanguage":"de","wgPageContentModel":"wikitext","wgRelevantPageName":"Antrax_GPS/GSM/GPRS_Shield","wgRelevantArticleId":7451,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],
+"wgRestrictionMove":[],"wgSmjUseCdn":!0,"wgSmjUseChem":!0,"wgSmjDisplayMath":[],"wgSmjExtraInlineMath":[],"wgSmjScale":1,"wgSmjEnableMenu":!0,"wgSmjDisplayAlign":"left"};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.ready","mediawiki.toc"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});mw.user.options.set({"variant":"de"});
+});});</script>
+<link rel="stylesheet" href="/load.php?lang=de&amp;modules=ext.cite.styles%7Cext.pygments&amp;only=styles&amp;skin=mikrocontroller"/>
+<script async="" src="/load.php?lang=de&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=mikrocontroller"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/load.php?lang=de&amp;modules=site.styles&amp;only=styles&amp;skin=mikrocontroller"/>
+<meta name="generator" content="MediaWiki 1.37.0"/>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="alternate" type="application/x-wiki" title="Bearbeiten" href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit"/>
+<link rel="edit" title="Bearbeiten" href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="Mikrocontroller.net (de)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://www.mikrocontroller.net/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="Atom-Feed für „Mikrocontroller.net“" href="/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom"/>
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<script>
+(window.RLQ=window.RLQ||[]).push(function(){
+  mw.loader.load( "/assets/application-d6fa7e3fe8a46b7b0f992965cfc59546755c17b327e31d70929902c7d8124df1.js" );
+});
+</script>
+<link rel="stylesheet" media="all" href="/assets/screen-0b149ad024b430a6039011ee3b7897b77886b19ecaf516531af1b61676078d9c.css" />
+<link rel="stylesheet" media="print" href="/assets/print-d245bf6f0a5fe74d9f377c2d91dcaf92e729af0ea914e45fe357de41f1118b55.css" />
+    <script async='async' src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
+    <script>
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+    googletag.cmd.push(function() {
+      var mappingRightSidebar = googletag.sizeMapping().addSize([0,0], [300, 250]).addSize([800, 600], [[300, 600], [300, 250], [160, 600]]).build();
+      var mappingLeftSidebar = googletag.sizeMapping().addSize([1250, 600], [[160, 600]]).build();
+      googletag.pubads().setForceSafeFrame(true);
+      googletag.pubads().setRequestNonPersonalizedAds(1);
+      googletag.pubads().setSafeFrameConfig({
+          allowOverlayExpansion: false,
+          allowPushExpansion: false,
+          sandbox: true
+      });
+      googletag.pubads().setPrivacySettings({
+        restrictDataProcessing: true,
+      });
+      googletag.pubads().setTargeting("mikro-categories", []);
+      googletag.defineSlot('/62616433/Mikrocontroller_Right_Sidebar_1', [[160, 600], [300, 600], [300, 250]], 'div-gpt-ad-1549487225707-0').defineSizeMapping(mappingRightSidebar).addService(googletag.pubads());
+      googletag.defineSlot('/62616433/Mikrocontroller_Left_Sidebar_1', [160, 600], 'div-gpt-ad-1549567092597-0').defineSizeMapping(mappingLeftSidebar).addService(googletag.pubads());
+      googletag.pubads().enableSingleRequest();
+      googletag.pubads().collapseEmptyDivs();
+      googletag.enableServices();
+    });
+    </script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80574-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+
+var gaProperty = 'UA-80574-1';
+
+//
+gtag('set', 'ads_data_redaction', true);
+//
+
+gtag('js', new Date());
+gtag('set', {
+  'dimension1': '',
+  'dimension2': 'Guest'
+});
+gtag('config', gaProperty, {
+  'anonymize_ip': true,
+  'allow_ad_personalization_signals': false,
+  'allow_google_signals': false
+});
+</script>
+
+
+
+
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Antrax_GPS_GSM_GPRS_Shield rootpage-Antrax_GPS_GSM_GPRS_Shield skin-mikrocontroller action-view">
+    <!--<script src="/javascripts/highlightCurrentLink.js" type="text/javascript"></script>-->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <style type="text/css">#nav-foren-sub {display: none;} </style>
+    <style type="text/css">#nav-tutorial-sub {display: none;} </style>
+
+<header>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed main-menu-toggle" data-toggle="collapse" data-target="#main-nav-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <button type="button" class="navbar-toggle collapsed login-toggle" data-toggle="collapse" data-target="#login-nav-collapse" aria-expanded="false">
+                    <span class="glyphicon glyphicon-user"></span>
+                </button>
+                <button type="button" class="navbar-toggle collapsed search-toggle" data-toggle="collapse" data-target="" aria-expanded="false">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+                <h1>
+                    <a href="/" class="navbar-brand">
+                        <img src="/images/logo.svg" alt="mikrocontroller.net" class="logo" />
+                    </a>
+                </h1>
+                <div class="pull-left mobile-search">
+                    <form action="https://www.google.de/cse" class="navbar-form clearfix">
+                        <input type="hidden" name="cx" value="partner-pub-1202612203358489:jaffbdxotov"/>
+                        <input type="hidden" name="ie" value="UTF-8"/>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon search">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </span>
+                                <input name="q" type="text" class="form-control" placeholder="Suchen">
+                                <span class="input-group-addon close-search close-btn">
+                                    <i class="glyphicon glyphicon-remove"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="login-nav-collapse">
+                <ul class="nav navbar-nav hidden-lg visible-xs">
+                    <li>
+                        <a href="/user/login">Log in</a>
+                    </li>
+                    <li>
+                        <a href="/user/register">Join</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-right" id="main-nav-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">Neuigkeiten</a>
+                    </li>
+                    <li class="dropdown main-menu-dropdown">
+                        <a href="/articles/Hauptseite" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Artikel
+                            <span class="glyphicon glyphicon-menu-down"></span></a>
+                        <div class="dropdown-menu">
+                            <div class="container">
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="/articles/AVR"><strong>AVR</strong></a>
+                                        <a href="/articles/AVR-Tutorial">AVR-Tutorial</a>
+                                        <a href="/articles/AVR-GCC-Tutorial">AVR-GCC-Tutorial</a>
+                                    </li>
+                                    <li>
+                                        <a href="/articles/ARM"><strong>ARM</strong></a>
+                                        <a href="/articles/LPC-Mikrocontroller">LPC</a>
+                                        <a href="/articles/STM32">STM32</a>
+                                        <a href="/articles/Infineon_XMC">XMC</a>
+                                    </li>
+                                    <li>
+                                        <a href="/articles/MSP430"><strong>MSP430</strong></a>
+                                    </li>
+                                    <li>
+                                        <a href="/articles/PIC"><strong>PIC</strong></a>
+                                    </li>
+                                    <li>
+                                        <a href="/articles/Programmierbare_Logik"><strong>FPGA, CPLD & Co.</strong></a>
+                                        <a href="/articles/FPGA">Grundlagen zu FPGAs</a>
+                                        <a href="/articles/Hardwarebeschreibungssprachen/">VHDL & Co.</a>
+                                        <a href="/articles/Xilinx_ISE">Xilinx ISE</a>
+                                    </li>
+                                    <li>
+                                        <a href="/articles/Digitale_Signalverarbeitung"><strong>DSP</strong></a>
+                                    </li>
+                                    <li>
+                                        <a href="/articles/Elektronik_Allgemein"><strong>Elektronik allgemein</strong></a>
+                                        <a href="/articles/SMD_L%C3%B6ten">SMD Löten</a>
+                                        <a href="/articles/Operationsverst%C3%A4rker-Grundschaltungen">Operationsverstärker</a>
+                                        <a href="/articles/Oszilloskop">Oszilloskop</a>
+                                    </li>
+                                    <li>
+                                        <a href="/articles/Hauptseite"><strong>Artikelübersicht
+</strong></a>
+                                    </li>
+                                    <li>
+                                        <a href="/articles/Spezial:Recentchanges"><strong>Letzte Änderungen</strong></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown main-menu-dropdown open-xs">
+                        <a href="/forum/all" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Forum
+                            <span class="glyphicon glyphicon-menu-down"></span></a>
+                        <div class="dropdown-menu">
+                            <div class="container">
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="/forum/all"><i class='icons mikro-all'></i> Beitr&auml;ge in allen Foren</a>
+                                    </li>
+                                    <li>
+                                        <a href="/forum/mikrocontroller-elektronik"><i class='icons mikro-mikrocontroller-elektronik'></i> µC &amp; Elektronik</a>
+                                    </li>
+                                    <li>
+                                        <a href="/forum/analogtechnik"><i class='icons mikro-analogtechnik'></i> Analogtechnik</a>
+                                    </li>
+                                    <li>
+                                        <a href="/forum/fpga-vhdl-cpld"><i class='icons mikro-fpga-vhdl-cpld'></i> FPGA, VHDL &amp; Co.</a>
+                                    </li>
+                                    <li>
+                                        <a href="/forum/dsp"><i class='icons mikro-dsp'></i> DSP</a>
+                                    </li>
+                                    <li>
+                                        <a href="/forum/gcc"><i class='icons mikro-gcc'></i>Compiler &amp; IDEs</a>
+                                    </li>
+                                    <li>
+                                        <a href="/forum/codesammlung"><i class='icons mikro-codesammlung'></i>Projekte &amp; Code</a>
+                                    </li>
+                                    <li>
+                                        <a href="/forum/markt"><i class='icons mikro-markt'></i>Markt</a>
+                                    </li>
+                                    <li>
+                                        <a href="/forum/platinen"><i class='icons mikro-platinen'></i>Platinen</a>
+                                    </li>
+                                    <li>
+                                        <a href="/forum/mechanik"><i class='icons mikro-mechanik'></i>Mechanik & Werkzeug</a>
+                                    </li>
+                                    <li>
+                                        <a href="/forum/hf"><i class='icons mikro-hf'></i>HF, Funk &amp; Felder</a>
+                                    </li>
+                                    <li>
+                                        <a href="/forum/fahrzeugelektronik"><i class='icons mikro-fahrzeugelektronik'></i>Fahrzeugelektronik</a>
+                                    </li>
+                                    <li>
+                                        <a href="/forum/hausbus"><i class='icons mikro-hausbus'></i>Haus &amp; Smart Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="/forum/pc-programmierung"><i class='icons mikro-pc-programmierung'></i>PC-Programmierung</a>
+                                    </li>
+                                    <li>
+                                        <a href="/forum/pc-hardware-software"><i class='icons mikro-pc-hardware-software'></i>PC Hard- &amp; Software</a>
+                                    </li>
+                                    <li>
+                                        <a href="/forum/ausbildung-studium-beruf"><i class='icons mikro-ausbildung-studium-beruf'></i>Ausbildung &amp; Beruf</a>
+                                    </li>
+                                    <li>
+                                        <a href="/forum/offtopic"><i class='icons mikro-offtopic'></i>Offtopic</a>
+                                    </li>
+                                    <li>
+                                        <a href="/forum/website"><i class='icons mikro-website'></i>Webseite</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <form action="https://www.google.de/cse" class="navbar-form navbar-left clearfix hidden-xs" id="cse-search-box">
+                    <input type="hidden" name="cx" value="partner-pub-1202612203358489:jaffbdxotov"/>
+                    <input type="hidden" name="ie" value="UTF-8"/>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input name="q" type="text" class="form-control" placeholder="Suchen">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <a href="/user/login">
+                        <button type="button" class="btn btn-default login-btn">Login</button>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+	<div id="outer-container">
+    <div id="globalWrapper">
+  <table id="twocolumns">
+  <tr>
+  <td id="sidebar-left" class="sidebar">
+  <!-- google_ad_section_start(weight=ignore) -->
+
+<script type="text/javascript">
+<!--
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+//-->
+</script>
+
+	<div id="p-cactions" class="portlet">
+	  <h5><a href="#toggle" onclick="javascript:toggle_visibility('p-cactions-box'); return false;" >&#9654; Dieser Artikel</a></h5>
+	  <div class="box" id="p-cactions-box">
+      <ul>
+	    <li id="ca-nstab-main"
+	       class="selected"	       ><a href="/articles/Antrax_GPS/GSM/GPRS_Shield">Seite</a></li><li id="ca-talk"
+	       class="new"	       ><a href="/index.php?title=Diskussion:Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;redlink=1">Diskussion</a></li><li id="ca-edit"
+	       	       ><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit">Bearbeiten</a></li><li id="ca-history"
+	       	       ><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=history">Versionsgeschichte</a></li>  	  </ul>
+    </div>
+	</div>
+	<div class="portlet" id="p-personal">
+	  <h5><a href="#toggle" onclick="javascript:toggle_visibility('p-personal-box'); return false;">&#9654; Benutzer</a></h5>
+	  <div class="box" id="p-personal-box">
+	    <ul>
+	    <li id="pt-anonuserpage"><a href="">Nicht angemeldet</a></li><li id="pt-anontalk"><a href="/articles/Spezial:Meine_Diskussionsseite">Diskussionsseite</a></li><li id="pt-anoncontribs"><a href="/articles/Spezial:Meine_Beitr%C3%A4ge">Beiträge</a></li><li id="pt-createaccount"><a href="/index.php?title=Spezial:Benutzerkonto_anlegen&amp;returnto=Antrax+GPS%2FGSM%2FGPRS+Shield">Benutzerkonto erstellen</a></li><li id="pt-login"><a href="/index.php?title=Spezial:Anmelden&amp;returnto=Antrax+GPS%2FGSM%2FGPRS+Shield">Anmelden</a></li>	    </ul>
+	  </div>
+	</div>
+  <!-- LOGO
+	<div class="portlet" id="p-logo">
+	  <a style="background-image: url(/resources/assets/wiki.png);"
+	    href="/articles/Hauptseite"
+	    title="Hauptseite"></a>
+	</div>
+  -->
+	<div id="p-search" class="portlet">
+	  <h5><a href="#toggle" onclick="javascript:toggle_visibility('p-search-box'); return false;">&#9654; Suche</a></h5>
+	  <div class="box" id="p-search-box">
+	    <form name="searchform" action="/articles/Spezial:Suche" id="searchform">
+	      <input id="searchInputX" name="search" type="text" accesskey="f" value="" /><br />
+	      <input type='submit' name="go" class="searchButton"
+	        value="Ausführen"
+	        />&nbsp;<input type='submit' name="fulltext"
+	        class="searchButton"
+	        value="Suche" />
+	    </form>
+	  </div>
+	</div>
+	<div class="portlet" id="p-tb">
+	  <h5><a href="#toggle" onclick="javascript:toggle_visibility('p-tb-box'); return false;">&#9654; Werkzeuge</a></h5>
+	    <div class="box" id="p-tb-box">
+      <ul>
+		  		  <li id="t-whatlinkshere"><a href="/articles/Spezial:Linkliste/Antrax_GPS/GSM/GPRS_Shield">Links auf diese Seite</a></li>
+		  		  <li id="t-recentchangeslinked"><a href="/articles/Spezial:%C3%84nderungen_an_verlinkten_Seiten/Antrax_GPS/GSM/GPRS_Shield">Änderungen an verlinkten Seiten</a></li>
+		  	      	      	      	      	      	      	      	      	      <li id="t-specialpages"><a href="/articles/Spezial:Spezialseiten">Spezialseiten</a></li>	      	    </ul>
+      </div>
+	</div>
+  <!-- google_ad_section_end -->
+  
+  <!-- start adsense -->
+    <!-- end adsense -->
+  
+      </td><!-- end of the left (by default at least) column -->
+  <td id="main"><div id="container">
+    <!-- google_ad_section_start -->
+    <a name="top" id="contentTop"></a>
+    		<div id="content">
+    <h1 class="firstHeading">Antrax GPS/GSM/GPRS Shield</h1>
+            <!-- tagline -->
+      <div id="siteSub">Aus der Mikrocontroller.net Artikelsammlung, mit Beiträgen verschiedener Autoren (siehe Versionsgeschichte)</div>
+      <!-- /tagline -->
+      
+    <div id="bodyContent">
+			<!-- subtitle -->
+			<div id="contentSub"></div>
+			<!-- /subtitle -->
+												<!-- jumpto -->
+			<div id="jump-to-nav" class="mw-jump">
+				Wechseln zu:				<a href="#mw-navigation">Navigation</a>, 				<a href="#p-search">Suche</a>
+			</div>
+			<!-- /jumpto -->
+						<!-- bodycontent -->
+			<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="de" dir="ltr"><div class="mw-parser-output"><p><i>von Stefan Schuster</i>
+</p>
+<div style="border: 1px solid #EEE;padding:1em;margin-bottom: 1em;">
+<p><i>Dieser Artikel nimmt am <a class="external text" href="http://www.mikrocontroller.net/topic/artikelwettbewerb-2012-2013">Artikelwettbewerb 2012/2013</a> teil.</i>
+</p>
+</div>
+<p><a href="/articles/GPS" title="GPS">GPS</a> und <a href="/index.php?title=GSM&amp;action=edit&amp;redlink=1" class="new" title="GSM (Seite nicht vorhanden)">GSM</a> sind häufig mit Arduino verwendete Technologien. GPS erlaubt die Poisitionsbestimmung mit Hilfe von Satellitensignalen und GSM erlaubt die Kommunikation über das Mobilfunk-Netz. Mit GPRS können über das Mobilfunknetz Datenverbindungen zu Internet-Servern aufgebaut werden. Da die Positionsbestimmung meist outdoor und fernab eines zugänglichen WLAN etc. erfolgt, bleibt für die Verarbeitung der Positionsdaten oft nur der Weg, diese zu speichern und später zu verarbeiten. Das ist für viele Anwendungen nicht ideal. Bei der Kombination von GPS und einer Kommunikationsmöglichkeit über Mobilfunk können Anwendungs-Daten mit GPS Informationen kombiniert und per GSM verschickt werden. Damit werden neue Anwendungen denkbar, die auf der Online-Verarbeitung von Daten auf einem Server basieren. Beispielsweise eine Echtzeit-Verfolgung eines Arduino-Boards auf einer Webseite. Ebenso kann über GPRS eine Datenverbindung aufgebaut werden und von einem Server Informationen gelesen werden. Es ist beispielsweise denkbar, dass Informationen zu Positionen angefragt werden.
+</p><p>Dieser Artikel beschreibt die Verwendung des GPS/GSM Shields von Antrax Datentechnik mit einem Arduino Board. Es wird eine eigene Bibliothek für die Verwendung von GSM und GPS vorgestellt (frei zum Download). Die verwendeten Chips sind auch in vielen anderen Produkten vorhanden oder können direkt mit wenig Beschaltung verwendet werden. Daher kann dieser Artikel auch bei ähnlichen Produkten mit diesen Chips weiterhelfen. Anhand von Beispielen wird auf die Funktionen des Shields eingegangen. Getestet sind die Beispiele auf einem Arduino Mega 2560 R3. 
+Die Bibliothek kann mit kleinen Anpassungen auch auf einem Arduino Uno verwendet werden. Als Kommunikationsmöglichkeiten werden sowohl SMS Versand als auch <a href="/index.php?title=GPRS&amp;action=edit&amp;redlink=1" class="new" title="GPRS (Seite nicht vorhanden)">GPRS</a> Datenverbindungen unterstützt.
+</p><p>Das Ziel des Artikels ist es, eine Grundlage für die Arbeit mit dem Shield oder den einzelnen sowie kompatiblen ICs zu liefern. Die Leser sollen verstehen wie die GPS und GSM Module mit dem Arduino kommunizieren. Ebenso soll ein grundlegendes Verständnis geschaffen werden, wie die Biliothek intern funktioniert, so dass bei Bedarf eigene Erweiterungen erstellt werden können. Beispielprogramme sollen die Verwendung zeigen, ggfs. auf verschiedenen Ebenen (direkte Verarbeitung der Nachrichten der Module oder Verarbeitung durch Bibliotheks-Methoden). Es wird davon ausgegangen, dass der Leser mit der Arduino-Plattform und der IDE sowie dem darin integrierten Tool "Serial Monitor" vertraut ist.
+</p><p><br />
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="de" dir="ltr"><h2 id="mw-toc-heading">Inhaltsverzeichnis</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Die_Hardware_und_Anbindung_des_GPS/GSM_Shields"><span class="tocnumber">1</span> <span class="toctext">Die Hardware und Anbindung des GPS/GSM Shields</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Verwendete_Pins"><span class="tocnumber">1.1</span> <span class="toctext">Verwendete Pins</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#GSM_Teil"><span class="tocnumber">1.2</span> <span class="toctext">GSM Teil</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#GPS_Teil"><span class="tocnumber">1.3</span> <span class="toctext">GPS Teil</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Die_Software_Bibliothek_und_die_Funktionen"><span class="tocnumber">2</span> <span class="toctext">Die Software Bibliothek und die Funktionen</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Generelle_Funktion_und_Aufruf_der_Bibliothek"><span class="tocnumber">2.1</span> <span class="toctext">Generelle Funktion und Aufruf der Bibliothek</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Basis-Methoden_und_Komfort-Methoden"><span class="tocnumber">2.1.1</span> <span class="toctext">Basis-Methoden und Komfort-Methoden</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Aufrufe_der_Basis-Methoden"><span class="tocnumber">2.1.2</span> <span class="toctext">Aufrufe der Basis-Methoden</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Aufruf_der_Komfort-Methoden"><span class="tocnumber">2.1.3</span> <span class="toctext">Aufruf der Komfort-Methoden</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#GPS_testen_und_verwenden"><span class="tocnumber">2.2</span> <span class="toctext">GPS testen und verwenden</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#Die_wichtigsten_NMEA_Nachrichten_des_GPS_Moduls"><span class="tocnumber">2.2.1</span> <span class="toctext">Die wichtigsten NMEA Nachrichten des GPS Moduls</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Interpretieren_der_Positionsdaten_mit_der_Bibliothek"><span class="tocnumber">2.2.2</span> <span class="toctext">Interpretieren der Positionsdaten mit der Bibliothek</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#GPS_Daten_für_Google_Maps_aufbereiten"><span class="tocnumber">2.2.3</span> <span class="toctext">GPS Daten für Google Maps aufbereiten</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-14"><a href="#GSM_testen_und_verwenden"><span class="tocnumber">2.3</span> <span class="toctext">GSM testen und verwenden</span></a>
+<ul>
+<li class="toclevel-3 tocsection-15"><a href="#Eine_SMS_versenden"><span class="tocnumber">2.3.1</span> <span class="toctext">Eine SMS versenden</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#GPRS_Verbindung_aufbauen_und_verwenden"><span class="tocnumber">2.3.2</span> <span class="toctext">GPRS Verbindung aufbauen und verwenden</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-17"><a href="#Die_Zustandsmaschine_der_Bibliothek"><span class="tocnumber">2.4</span> <span class="toctext">Die Zustandsmaschine der Bibliothek</span></a>
+<ul>
+<li class="toclevel-3 tocsection-18"><a href="#Verwendung_der_Zustandsmaschine_am_Beispiel_der_initialize_Methode_des_GSM_Moduls"><span class="tocnumber">2.4.1</span> <span class="toctext">Verwendung der Zustandsmaschine am Beispiel der initialize Methode des GSM Moduls</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#Verwendung_der_Zustandsmaschine_in_eigenen_Programmen"><span class="tocnumber">2.4.2</span> <span class="toctext">Verwendung der Zustandsmaschine in eigenen Programmen</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#Beispiel_zur_Kombination_von_GSM_und_GPS"><span class="tocnumber">3</span> <span class="toctext">Beispiel zur Kombination von GSM und GPS</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#Fazit_und_Ausblick"><span class="tocnumber">4</span> <span class="toctext">Fazit und Ausblick</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#FAQ"><span class="tocnumber">5</span> <span class="toctext">FAQ</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#Einzelnachweise_und_Downloads"><span class="tocnumber">6</span> <span class="toctext">Einzelnachweise und Downloads</span></a></li>
+</ul>
+</div>
+
+<h2><span id="Die_Hardware_und_Anbindung_des_GPS.2FGSM_Shields"></span><span class="mw-headline" id="Die_Hardware_und_Anbindung_des_GPS/GSM_Shields">Die Hardware und Anbindung des GPS/GSM Shields</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Die Hardware und Anbindung des GPS/GSM Shields">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Dieser Abschnitt enthält die wichtigsten technischen Informationen zu den verbauten Komponenten und deren Anbindung. Die Angaben basieren auf den Produktinformationen aus der Seite des Onlineshops<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup>. Das Shield ist für einen Arduino Uno ausgelegt, es ist jedoch auch eine Anleitung und sogar ein Umbaukit verfügbar, mit dem die einfache Adaption an einen Arduino Mega 2560 R3 gegeben ist. Die Anbindung des Shields an den Arduino ist mit Level-Shiftern realisiert, d.h. die interne Betriebsspannung und die Pegel des GSM und des GPS Teils können von den üblichen 5V des Arduino abweichen (und tun es auch). Als Level-Shifter Bausteine kommen 74AVC4T774 ICs zum Einsatz. Die notwendigen Betriebsspannungen werden auf dem Shield selbst aus der Ardunio-Spannungsversorgung erzeugt. Für die Verwendung des GSM Moduls wird eine externe Stromversorgung am Arduino empfohlen, da die USB Schnittstelle hier an ihre Grenzen gelangen kann. Ich habe eine Stromaufnahme von 160mA im Leerlauf und 250mA beim senden gemessen. Der notwendige Strom beim senden hängt stark von der Mobilfunk-Abdeckung ab, da soviel Leistung eingesetzt wird wie notwendig ist um sicher mit der nächsten Basis-Station zu kommunizieren.
+</p>
+<h3><span class="mw-headline" id="Verwendete_Pins">Verwendete Pins</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Verwendete Pins">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Die verwendeten Pins sind in der Shieldlist<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> dokumentiert. Aus Gründen der Übersichtlichkeit hier nochmals als Liste (bezogen auf das Arduino Uno Layout).
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Arduino Uno Pin</th>
+<th>Bedeutung
+</th></tr>
+<tr>
+<td>D0, D1</td>
+<td>RX, TX (Serielle Kommunikation mit GSM)
+</td></tr>
+<tr>
+<td>D2</td>
+<td>CRING (Serielle Kommunikation mit GSM)
+</td></tr>
+<tr>
+<td>D3</td>
+<td>CTS (Serielle Kommunikation mit GSM)
+</td></tr>
+<tr>
+<td>D4</td>
+<td>DTR (Serielle Kommunikation mit GSM)
+</td></tr>
+<tr>
+<td>D5</td>
+<td>RTS (Serielle Kommunikation mit GSM)
+</td></tr>
+<tr>
+<td>D6</td>
+<td>DCD (Serielle Kommunikation mit GSM)
+</td></tr>
+<tr>
+<td>D7</td>
+<td>GSM_EN (GSM einschalten)
+</td></tr>
+<tr>
+<td>D9</td>
+<td>GPS LED (kann auch via SPI eingeschaltet werden)
+</td></tr>
+<tr>
+<td>D10, D11, D12, D13</td>
+<td>SPI Kommunikation mit GPS
+</td></tr>
+<tr>
+<td>A0 als D14</td>
+<td>P1 (GSM-Button, kann auch via SPI abgefragt werden)
+</td></tr>
+<tr>
+<td>A1 as D15</td>
+<td>P2 (GPS-Button, kann auch via SPI abgefragt werden)
+</td></tr></tbody></table>
+<p>Achtung: Da die RX/TX Pins D0 und D1 verwendet werden, kommt es zu einer Überschneidung mit dem USB-UART eines Arduino Uno (und wenn die Pins nicht anderst verbunden werden auch beim Mega 2560 R3). Das zeigt sich auch daran, dass im Serial Monitor der Arduino IDE die AT Befehle an das GSM Modul zu sehen sind. Siehe dazu auch den Eintrag im Forum <sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>. Damit sind die Möglichkeiten etwas limitiert (man kann schwer eine Kommunikation per Serial Monitor mit dem Modul aufbauen), daher wurde für diesen Artikel auf einen Arduino Mega 2560 zurückgegriffen. Für die Verwendung mit dem Arduino Mega 2560 R3 sind die folgenden Pins vorgesehen (Achtung, das bedeutet, das man das Shield nicht einfach stecken kann, es muss statt dessen mit Brücken/Kabeln passend verbunden werden!).
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/articles/Datei:GPS_Shield_auf_Mega_2560.jpg" class="image"><img alt="" src="https://www.mikrocontroller.net/wikifiles/thumb/c/c9/GPS_Shield_auf_Mega_2560.jpg/300px-GPS_Shield_auf_Mega_2560.jpg" decoding="async" width="300" height="197" class="thumbimage" srcset="https://www.mikrocontroller.net/wikifiles/thumb/c/c9/GPS_Shield_auf_Mega_2560.jpg/450px-GPS_Shield_auf_Mega_2560.jpg 1.5x, https://www.mikrocontroller.net/wikifiles/thumb/c/c9/GPS_Shield_auf_Mega_2560.jpg/600px-GPS_Shield_auf_Mega_2560.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/articles/Datei:GPS_Shield_auf_Mega_2560.jpg" class="internal" title="vergrößern"></a></div>Installiertes Board mit umbelegten Anschlüssen</div></div></div>
+<p>Das Bild rechts zeigt die Installation auf einem Arduino 2560 R3. Die folgenden Pins sind nicht direkt mit den Buchsenleisten darunter verbunden, sondern umbelegt (siehe Tabelle unten). Das umbelegen lässt sich an einfachsten realisieren, indem man die entsprechenden Pins am Shield rechtwinklig abbiegt, eine Buchsenleiste mit Kabeln und Silberdraht als Steckern versieht und dann diese seitlich an die abgewinkelten Pins steckt. 
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Arduino Uno Pin</th>
+<th>Bedeutung</th>
+<th>Zielpin auf Arduino Mega 2560 R3
+</th></tr>
+<tr>
+<td>0 (RX)</td>
+<td>RX des Serial Interfaces gelegt auf Serial 1</td>
+<td>19 (RX1)
+</td></tr>
+<tr>
+<td>1 (TX)</td>
+<td>TX des Serial Interfaces gelegt auf Serial 1</td>
+<td>18 (TX1)
+</td></tr>
+<tr>
+<td>11 SPI MOSI</td>
+<td>SPI MOSI</td>
+<td>51
+</td></tr>
+<tr>
+<td>12 SPI MISO</td>
+<td>SPI MISO</td>
+<td>50
+</td></tr>
+<tr>
+<td>13 SPI SCK</td>
+<td>SPI SCK</td>
+<td>52
+</td></tr>
+<tr>
+<td>14 SPI SS</td>
+<td>SPI SS</td>
+<td>52
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="GSM_Teil">GSM Teil</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: GSM Teil">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Es ist das GSM-Modul Telit GE865-QUAD <sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> verbaut. Eine Antenne ist nicht auf dem Board, es ist eine externe Antenne notwendig. Diese wird über einen SMA/M-Konnektor angeschlossen. Ebenso ist eine <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/SIM-Karte">SIM-Karte</a> notwendig (im Mini-SIM Format). Die Betriebsspannung des GSM Teils beträgt 4V. Die Kommunikation erfolgt über Pegelwandler direkt zwischen Arduino-Board und dem GSM Chip. Das Setup der Schnittstelle wird durch die Bibliothek erledigt. Ist die Verbindung hergestellt, werden <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/AT-Befehlssatz">AT-Kommandos</a> ausgetauscht.
+</p><p>Das Modul unterstützt alle GSM Bänder (daher die Bezeichnung quad für quad-Band). Das Modul hat Features wie einen integrierten TCP/IP Stack,
+welcher für die GPRS Kommunikation zu einem Webserver verwendet wird. Das Modul kann sogar Anwendungen in einem eingebauten Python Script Interpreter ausführen. Ebenso kann es WAV Dateien lesen und in einem Anruf abspielen. Damit werden Sprachmenüs möglich! Diese fortgeschrittenen Features werden in diesem Artikel allerdings nicht betrachtet.
+</p>
+<h3><span class="mw-headline" id="GPS_Teil">GPS Teil</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: GPS Teil">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Beim GPS Modul handelt es sich um ein UP501 von Fastrax <sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>. Die Betriebsspannung des GPS Teils beträgt 3,3V. Die Kommunikation mit dem GPS Modul erfolgt über <a href="/articles/SPI" class="mw-redirect" title="SPI">SPI</a> zum Shield. Verwendet wird SPI Mode 0. Die Geschwindigkeit in der Bibliothek sind 25kHz. Auf dem Shield wird SPI mit einer SC16IS750 SPI-UART Bridge an das eigentliche GPS Modul angebunden. Das bedeutet, dass nach dem Setup der Bridge (wird von der Bibliothek erledigt) über SPI mit dem GPS Modul kommuniziert werden kann, die Fluss-Steuerung erfolgt durch die Kommunikation mit den Registern des SPI-UART Chips. Auch hier sind die Details durch die Bibliothek gekapselt. Die Kommunikation auf Anwendungsebene erfolgt durch den Austauch von <a href="/articles/NMEA" title="NMEA">NMEA</a> Sätzen.
+</p><p>Das Modul verfügt über eine integrierte Antenne und eine hohe Empfindlichkeit von -165 dBm. Dabei ist eine Aktualisierungrate von 10Hz möglich. Standardmäßig wird einmal pro Sekunde aktualisiert. Trotz der hohen Empfindlichkeit ist in den meisten Gebäuden kaum der Empfang von ausreichend Daten für eine Positionsbestimmung möglich. Ein Blätterwald sollte jedoch kein Problem darstellen.
+</p>
+<h2><span class="mw-headline" id="Die_Software_Bibliothek_und_die_Funktionen">Die Software Bibliothek und die Funktionen</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Die Software Bibliothek und die Funktionen">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Dieser Abschnitt beschreibt die Klassen der Bibliothek, deren Methoden für den Anwender und interne Funktionsweise. Die Bibliothek kommt in einem zip-File, siehe unten der Abschnitt "Downloads". Dieses wird in das "libraries" Verzeichniss von Arduino entpackt. Danach stehen die beiden Headerfiles GSM.h und GPS.h zur Verfügung, die in eigene Programme inkludiert werden können. Ebenso stehen nach einem Neustart der Arduino IDE Beispiele zur Auswahl. Ein Hauptziel bei der Entwicklung der Bibliothek war, dass die Kommunikation mit den Modulen recht offen erfolgt, so dass man nicht durch high-level Funktionen zu sehr abgeschottet ist. Es sollen für die häufigsten Anwendungsfälle aber auch Methoden bereitsgestellt werden, welche die Aufrufe relativ einfach machen.
+</p>
+<h3><span class="mw-headline" id="Generelle_Funktion_und_Aufruf_der_Bibliothek">Generelle Funktion und Aufruf der Bibliothek</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Generelle Funktion und Aufruf der Bibliothek">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Die Bibliothek stellt im wesentlichen zwei Klassen zur Verfügung: GPS und GSM. 
+Dazu kommt noch die Klasse State_Machine, die intern in der GSM Klasse verwendet wird, aber auch für eigene Anwendungen und Erweiterungen benutzt werden kann. Objekte dieser Klassen werden nicht im Headerfile instanziiert. Arduino-Bibliotheken machen das gerne so z.B. die SPI Bibliothek. Darum kann man da gleich SPI.methodeX aufrufen ohne ein Objekt zu instanziieren. Nach dem Instanziieren muss für Objekte der Klassen GSM und GPS einmal die Methode initialize() aufgerufen werden. Diese Methode ist blockierend und kann insbesondere bei der GSM Klasse mehrere Sekunden in Anspruch nehmen. Es bietet sich also an, diese in der setup() Funktion von Arduino aufzurufen. Die Klasse GSM bietet darüber hinaus auch einen Konstruktor an, der mit (1) aufgerufen dafür sorgt, dass Debug-Ausgaben auf das serielle Interface Serial geschrieben werden und am Serial Monitor von Arduino sichtbar sind. Dazu muss aber vor dem Aufruf der initialize-Methode das serielle Interface mit Serial.begin(BAUD) gestartet sein.
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="n">GPS</span><span class="w"> </span><span class="n">gps</span><span class="p">;</span><span class="w"> </span>
+<span class="c1">// wir wollen Debug-Ausgaben auf Serial.</span>
+<span class="n">GSM</span><span class="w"> </span><span class="nf">gsm</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">   </span>
+<span class="w">  </span><span class="c1">// Serial selbst starten bevor Debug Ausgaben übergeben werden!</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">gps</span><span class="p">.</span><span class="n">initialize</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="n">gsm</span><span class="p">.</span><span class="n">initialize</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div> 
+<h4><span class="mw-headline" id="Basis-Methoden_und_Komfort-Methoden">Basis-Methoden und Komfort-Methoden</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Basis-Methoden und Komfort-Methoden">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Die Methoden der Klassen lassen sich in zwei Arten unterscheiden. Zum einen Basis-Methoden, die recht nahe an der Hardware arbeiten und sich auf den Austausch von Nachrichten beschränken, dabei nicht blockierend sind. Zum anderen Komfort-Methoden, die ganze Abläufe kapseln (beispielsweise den Versand einer SMS), dafür jedoch nicht so tiefe Eingriffe erlauben und blockierend sind, also den Ablauf in der Loop-Schleife für Sekunden unterbrechen können. Ein Hinweis zu den Begriffen: Basis-Methode und Komfort-Methode sind im Software-Engineering nicht präzise definiert und können in der Literatur abweichend verwendet werden.
+</p>
+<h4><span class="mw-headline" id="Aufrufe_der_Basis-Methoden">Aufrufe der Basis-Methoden</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Aufrufe der Basis-Methoden">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Die Basis-Methoden der Klassen sind nicht wartend ausgelegt und nicht blockierend. Das bedeutet, dass Sie gut in der Haupt-Loop aufgerufen werden können, wenn nichts zu tun ist oder noch kein Ergebniss vorliegt kehren Sie sofort zurück. Es bedeutet aber auch, dass die Methoden unter Umständen öfter aufgerufen werden müssen, bis ein Ergebniss vorliegt (weil z.B. ein String noch nicht vollständig vorliegt). Ein Beispiel dazu ist die Methode im folgenden Beispiel (reduziert auf die logischen Schritte, mit pseudocode_ namen markiert). Wichtig: Die initialize Methoden der GPS und GSM Klassen bilden eine Ausnahme, sie kehren erst nach fertiger Initialisierung zurück. Das kann insb. bei der GSM Klasse bis zu 5 Sekunden dauern und sollte daher berücksichtigt werden.
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">GPS::read_gps_buffer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">pseudocode_lese_zeichen_in_zeile</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">pseudocode_zeile_fertig</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// &lt;cr&gt; emfpangen?</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>Um also alle Zeichen zu lesen und einen kompletten String im Puffer vorzufinden, muss ein Aufrufer die Methode wie folgt benutzen:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="n">GPS</span><span class="w"> </span><span class="n">gps</span><span class="p">;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// .... in der main loop andere dinge erledigen</span>
+<span class="w">  </span><span class="c1">// prüfen, ob schon ein ganzer String vorliegt</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">gps</span><span class="p">.</span><span class="n">read_gps_buffer</span><span class="p">()){</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// puffer hält kompletten NMEA String, abholen!</span>
+<span class="w">    </span><span class="n">my_buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gps</span><span class="p">.</span><span class="n">get_gps_buffer</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// ....</span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>Die Methode wird also in jedem Schleifendurchlauf aufgerufen und meldet dann per Rückgabewert, wenn sie ein sinnvolles Ergebniss erzeugt hat. Wenn das Ergebniss noch nicht da ist, dann vielleicht beim nächsten Aufruf. Das klingt erstmal umständlich, damit hat der Aufrufer aber die bessere Kontrolle über die zeitlichen Ablauf seines Programmes. Oft sollen ja noch andere Dinge erledigt werden, während z.B. das GPS Modul noch kein Ergebniss geliefert hat. Ausflug in die Programmierung allgemein: Wenn eine Funktion nicht in jedem Durchlauf aufgerufen werden soll, dann kann man das gut mit dem Einsatz der millis() Funktion tun. Einfach bei jedem Durchlauf prüfen ob schon genug Zeit vergangen ist. Ein guter Artikel dazu findet sich unter <sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup>
+</p>
+<h4><span class="mw-headline" id="Aufruf_der_Komfort-Methoden">Aufruf der Komfort-Methoden</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Aufruf der Komfort-Methoden">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Die Komfort-Methoden nutzen intern die Basis-Methoden. Sie sind jedoch so programmiert, dass eine Funktionalität komplett abgearbeitet wird, bevor sie zum Aufrufer zurückkehren. Ein Beispiel ist die Methode send_SMS() der GSM Klasse. Das GSM Modul kann AT Befehle nicht beliebig schnell hintereinander verarbeiten, es sind Wartezeiten notwendig. Um diese Komplexität vom Aufrufer fernzuhalten wird der Ablauf komplett gekapselt. Ein weiteres Beispiel ist die Methode get_next_gps_position der GPS Klasse. Diese blockiert so lange, bis ein vollständiger GPGGA String empfangen wurde und parst diesen dann. In späteren Versionen der Bibliothek sind Versionen dieser Methoden denkbar, die zyklisch aufgerufen werden und dann ihre Fertig-Stellung melden. Für den Artikel wird aus Komplexitätsgründen aber darauf verzichtet. Es wird nämlich auch für den Aufrufer schnell kompliziert seine Aktionen in eine Reihenfolge zu bringen. Ein Aufruf einer Komfort-Methode sieht also so aus (anhand der beiden Beispiele):
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">//...</span>
+<span class="c1">// diese Methode kehrt erst nach dem Versand zurück. das kann</span>
+<span class="c1">// ein paar Sekunden dauern.</span>
+<span class="n">gsm</span><span class="p">.</span><span class="n">send_SMS</span><span class="p">(</span><span class="s">&quot;0172111222333&quot;</span><span class="p">,</span><span class="s">&quot;Hallo SMS Welt&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//...</span>
+<span class="n">nmae_gpgga_message</span><span class="w"> </span><span class="n">gps_msg</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// warten auf die GPS information als GPGGA String</span>
+<span class="n">gps</span><span class="p">.</span><span class="n">get_next_gps_position</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gps_msg</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// ...</span>
+</pre></div>
+<h3><span class="mw-headline" id="GPS_testen_und_verwenden">GPS testen und verwenden</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=10" title="Abschnitt bearbeiten: GPS testen und verwenden">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Im folgenden Kapitel wird von einem "GPS Fix" gesprochen. "Einen GPS Fix haben" bedeutet, dass das Shield genug Satelliten sieht und genug Daten von diesen empfangen hat, dass es seine Position berechnen kann. Dies vorab für die GPS Neulinge unter den Lesern. 
+</p><p>Die GPS Klasse verwendet die SPI Pins der jeweiligen Plattform wie oben in den Tabellen angegeben. Es wird intern die SPI Bibliothek verwendet. Wenn es beim Kompilieren zu Fehlern kommt, kann es helfen im Sketch auch ein #include&lt;SPI&gt; hinzuzufügen - auch wenn dies nicht notwendig sein sollte, da die GPS.h Datei ihrerseits SPI.h includiert. Die Basis-Methoden erlauben das Einlesen von Daten vom Modul via SPI in den Puffer des GPS Objekts und den Zugriff auf diesen Puffer. Die lese-Methode (read_gps_buffer) gibt dabei auch zurück ob das Puffer eine vollständige Nachricht enthält. Vollständig ist eine Nachricht dann, wenn sie mit &lt;CR&gt;&lt;LF&gt; endet. Der öffentliche Teil der Klassendeklaration ist:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">// ... </span>
+<span class="c1">// defines fürs einschalten/ausschalten der LED</span>
+<span class="cp">#define GPS_LED_ON	0x00</span>
+<span class="cp">#define GPS_LED_OFF	0x07</span>
+<span class="c1">// defines für die beiden Taster auf der GPS Platine</span>
+<span class="cp">#define GPS_SWITCH_0	0x00</span>
+<span class="cp">#define GPS_SWITCH_1	0x01</span>
+
+<span class="c1">// eine struktur, die die wichtigsten daten zur positionsbestimmung enhält.</span>
+<span class="c1">// wird von parse_nmea_gpgga_string befüllt</span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span> <span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">char</span><span class="w">  </span><span class="o">*</span><span class="w"> </span><span class="n">quality</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">char</span><span class="w">  </span><span class="o">*</span><span class="w"> </span><span class="n">longitude</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">char</span><span class="w">  </span><span class="o">*</span><span class="w"> </span><span class="n">longitude_indicator</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">char</span><span class="w">  </span><span class="o">*</span><span class="w"> </span><span class="n">latitude</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">char</span><span class="w">  </span><span class="o">*</span><span class="w"> </span><span class="n">latitude_indicator</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="n">nmae_gpgga_message</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span>
+<span class="n">class</span><span class="w"> </span><span class="n">GPS</span><span class="w"> </span><span class="p">{</span><span class="w">     </span>
+<span class="w">  </span><span class="nl">public</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// gibt true zurück wenn der Buffer eine gültige NMEA nachricht hat.</span>
+<span class="w">    </span><span class="c1">// blockiert nicht.</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">read_gps_buffer</span><span class="p">();</span><span class="w">     </span>
+
+<span class="w">    </span><span class="c1">// gibt den buffer zurück (zeiger, KEINE kopie)</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">get_gps_buffer</span><span class="p">();</span><span class="w">    </span>
+
+<span class="w">    </span><span class="c1">// blockierend. kehrt zurück wenn ein ganzer GPGGA String angekommen ist und füllt die info in die Struktur</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">get_next_gps_position</span><span class="p">(</span><span class="n">nmae_gpgga_message</span><span class="w">  </span><span class="o">*</span><span class="w"> </span><span class="n">gpgga_msg</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// parst den puffer auf eine gpgga_nachricht. Verändert gps_string!</span>
+<span class="w">    </span><span class="n">byte</span><span class="w"> </span><span class="nf">parse_nmea_gpgga_string</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">gps_string</span><span class="p">,</span><span class="w"> </span><span class="n">nmae_gpgga_message</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">gpgga_msg</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// initialisiert die Kommunikation. Gibt 1 bei Erfolg zurück.</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="nf">initialize</span><span class="p">();</span><span class="w"> </span>
+
+<span class="w">    </span><span class="c1">// prüft ob der taster s gedrückt ist</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="nf">check_switch</span><span class="p">(</span><span class="n">byte</span><span class="w"> </span><span class="n">s</span><span class="p">);</span><span class="w"> </span>
+
+<span class="w">    </span><span class="c1">// schaltet die LED ein oder aus</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">set_LED</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">state</span><span class="p">);</span><span class="w"> </span>
+
+<span class="c1">// ....</span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>Um die rohen Daten des GPS Signals auf dem USB Port auszugeben, kann folgender Beispielcode verwendet werden (bei installierter Bibliothek auch in der IDE verfügbar unter Datei/Beispiele/GSM_GPS/GPS_Test).
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;GPS.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SPI.h&gt;</span><span class="cp"></span>
+
+<span class="n">GPS</span><span class="w"> </span><span class="n">gps</span><span class="p">;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">(){</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">gps</span><span class="p">.</span><span class="n">initialize</span><span class="p">()){</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Init ok&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Init failure&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">(){</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// SPI zeichen lesen und prüfen ob damit der String komplett ist</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">gps</span><span class="p">.</span><span class="n">read_gps_buffer</span><span class="p">()){</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// kompletter string ist vorhanden</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">gps</span><span class="p">.</span><span class="n">get_gps_buffer</span><span class="p">());</span><span class="w">  </span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>Das Programm interpretiert die Daten nicht weiter, sondern prüft immer wieder ob bereits eine vollständige Antwort vom Modul vorliegt. Eine Antwort ist eine Zeile mit &lt;CR&gt;&lt;LF&gt; am Ende. Mit diesem Programm ergibt sich bei korrekter Funktion (noch ohne GPS fix) eine Ausgabe wie diese hier
+</p>
+<pre>Init ok
+$GPGGA,134354.765,,,,,0,0,,,M,,M,,*48
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+$GPGSV,1,1,02,05,,,23,26,,,25*7C
+$GPRMC,134354.765,V,,,,,0.00,0.00,220213,,,N*4D
+</pre>
+<p>Wenn das Modul bereits einen GPS Fix hat und die Position bestimmen kann wird die Ausgabe wie folgt aussehen:
+</p>
+<pre>$GPGGA,193232.000,4844.5529,N,00920.1957,E,1,7,1.06,345.4,M,48.0,M,,*58
+$GPGSA,A,3,24,09,12,22,26,15,17,,,,,,1.34,1.06,0.83*02
+$GPGSV,4,1,13,24,81,324,29,12,48,239,17,09,45,102,30,15,41,183,25*7A
+$GPGSV,4,2,13,17,39,064,19,22,15,296,17,18,15,263,,25,14,241,18*72
+$GPGSV,4,3,13,14,13,319,,26,09,156,17,28,04,057,,01,02,013,*74
+$GPGSV,4,4,13,04,01,109,*46
+$GPRMC,193232.000,A,4844.5529,N,00920.1957,E,0.54,151.82,230213,,,A*6F
+</pre>
+<h4><span class="mw-headline" id="Die_wichtigsten_NMEA_Nachrichten_des_GPS_Moduls">Die wichtigsten NMEA Nachrichten des GPS Moduls</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=11" title="Abschnitt bearbeiten: Die wichtigsten NMEA Nachrichten des GPS Moduls">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Die <a href="/articles/NMEA" title="NMEA">NMEA</a> Nachrichten sind gut dokumentiert und werden hier nicht alle besprochen. Grundsätzlich sind die einzelnen Felder der Nachricht durch ',' getrennt und eine Nachricht wird durch &lt;CR&gt;&lt;LF&gt; beendet, so dass das Parsen recht einfach ist. Die folgenden Nachrichten sendet das GPS Modul zyklisch:
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Nachricht</th>
+<th>Inhalt
+</th></tr>
+<tr>
+<td>GPGGA</td>
+<td>Positionsdaten und Informationen zur Positionsqualität (letztes Update,....
+</td></tr>
+<tr>
+<td>GPGSA</td>
+<td>Informationen zum GPS Fix (2D, 3D, Satelliten und Präzision)
+</td></tr>
+<tr>
+<td>GPGSV</td>
+<td>Informationen zu den Satelliten die gesehen werden. Je nach Anzahl der Satelliten können hier mehrere Zeilen auftauchen.
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Interpretieren_der_Positionsdaten_mit_der_Bibliothek">Interpretieren der Positionsdaten mit der Bibliothek</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=12" title="Abschnitt bearbeiten: Interpretieren der Positionsdaten mit der Bibliothek">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Nach einiger Zeit (bei Wolken und erstmaligem Start nach langer Zeit ohne Strom kann es schonmal 5 Minuten dauern), wird das Shield einen GPS Fix bekommen und kann nun seine Koordinaten berechnen und ausgeben. Das sieht dann aus wie im Beispiel oben (je nach Anzahl der empfangenen Satelliten können mehr Zeilen ausgegeben werden). Von Interesse ist vor allem die Zeile, die mit GPGGA beginnt. Diese Zeile enthält die Koordinaten. Für das Parsen und interpretieren dieser Zeile stellt die Bibliothek eine Methode zur Verfügung. Mit Hilfe dieser Methode wird die GPGGA Zeile so aufbereitet, dass:
+</p>
+<ol><li>Ein Programm abfragen kann, ob das Modul seine Position überhaupt feststellen und</li>
+<li>Die Position aus der Nachricht extrahieren kann.</li></ol>
+<p>Für diese Aufgaben stellt die Bibliothek eine Methode und eine Datenstruktur zur Verfügung. Als Datenstruktur dient nmae_gpgga_message, welche die wichtigsten Daten enthält. Befüllt wird sie mit der Methode parse_nmea_gpgga_string.
+</p>
+<pre>byte parse_nmea_gpgga_string(char * gps_string, nmae_gpgga_message  * gpgga_msg);
+
+typedef struct {
+  char  * quality;
+  char  * longitude;
+  char  * longitude_indicator;
+  char  * latitude;
+  char  * latitude_indicator;
+} nmae_gpgga_message;
+</pre>
+<p>Hier ein kleiner Ausflug in den internen Aufbau der Methode, für den interessierten Leser, der sie vielleicht erweitern möchte. Intern nutzt die Bibliothek die String Funktionen der C stdlib. Ähnlich wie die Funktion strtok der stdlib verändert auch die parse-Funktion das Argument durch das Einfügen von 0-Zeichen. Darum der Hinweis in der Header-Datei. Soll der ursprüngliche String beibehalten werden, muss eine Kopieübergeben werden. Besonders in Verbindung mit der get_gps_buffer Methode ist vorsicht geboten. Diese gibt keine Kopie sondern einen Zeiger auf den internen Puffer zurück. Diese Verhaltensweisen sind absichtlich so gewählt um Speicher zu sparen. Kopien werden nur bei Bedarf von der Anwendung angelegt. Die String-Klasse von Arduino verwende ich nicht, um einigermaßen plattformunabhängig zu bleiben.
+</p><p>Weitere Hinweise zu Stringbearbeitung mit reinem C finden sich z.B. hier im Artikel <a href="/articles/String-Verarbeitung_in_C" title="String-Verarbeitung in C">String-Verarbeitung_in_C</a>. Die Beschreibung der GPGGA Zeile finden wir z.B. unter <sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup>. Auszugsweise finden wir dort die Information, wie der String aufgebaut ist.
+</p>
+<pre>$GPGGA,HHMMSS.SS,DDMM.MMMMM,K,DDDMM.MMMMM,L,N,QQ,PP.P,AAAA.AA,M,±XX.XX,M,SSS,AAAA*CC
+</pre>
+<p>Dabei sind diese Bestandteile hier die wichtigsten:
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Kürzel in String</th>
+<th>Bedeutung
+</th></tr>
+<tr>
+<td>N</td>
+<td>Qualität der Positionsdaten.
+<ul><li>0 = keine Position</li>
+<li>1,2,3,4,5 = Position vorhanden in unterschiedlichen Qualitäten</li></ul>
+</td></tr>
+<tr>
+<td>DDMM.MMMMM (die erste Gruppe)</td>
+<td>Längengrad in Grad, Minuten, Dezimal Minuten
+</td></tr>
+<tr>
+<td>K</td>
+<td>Nord oder Süd (N oder S)
+</td></tr>
+<tr>
+<td>DDMM.MMMMM (die zweite Gruppe)</td>
+<td>Breitengrad in Grad, Minuten, Dezimal Minuten
+</td></tr>
+<tr>
+<td>L</td>
+<td>Ost oder West (E oder W)
+</td></tr></tbody></table>
+<p>Mit diesen Informationen können wir den String untersuchen und die für uns wichtigen Informationen herausfiltern mit der Bibliothek Methode. Das Beispiel ist bei installierter Bibliothek auch zu finden in der IDE unter Datei/Beispiele/GSM_GPS/GPS_Test_parse_gpgga. Eine Besonderheit ist für das Shield zu beachten: Es werden für den Längengrad abweichend von der Spezifikation die Gradzahlen in drei Stellen ausgegeben. Das Format nur für den Längengrad ist bei diesem GPS Modul also DDDMM.MMMMM!
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;GPS.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SPI.h&gt;</span><span class="cp"></span>
+
+<span class="n">GPS</span><span class="w"> </span><span class="n">gps</span><span class="p">;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">(){</span><span class="w"></span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">gps</span><span class="p">.</span><span class="n">initialize</span><span class="p">()){</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Init ok&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Init failure&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="w"> </span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">(){</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// SPI zeichen lesen und prüfen ob damit der String komplett ist</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">gps</span><span class="p">.</span><span class="n">read_gps_buffer</span><span class="p">()){</span><span class="w"></span>
+<span class="w">    </span><span class="n">nmae_gpgga_message</span><span class="w"> </span><span class="n">gpgga_msg</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">gps_string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gps</span><span class="p">.</span><span class="n">get_gps_buffer</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// weil die parse-funktion den string ändert, kopieren wir ihn erst</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">buffer</span><span class="p">[</span><span class="n">strlen</span><span class="p">(</span><span class="n">gps_string</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="c1">// trailing 0</span>
+<span class="w">    </span><span class="n">strcpy</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="n">gps_string</span><span class="p">);</span><span class="w"> </span><span class="c1">// strncopy für produktiven code!   </span>
+
+<span class="w">    </span><span class="c1">// wenn der string eine gpgga nachricht ist, bekommen wir die teile hiermmit und 1 als returncode.</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">gps</span><span class="p">.</span><span class="n">parse_nmea_gpgga_string</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="o">&amp;</span><span class="n">gpgga_msg</span><span class="p">)){</span><span class="w"></span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">gpgga_msg</span><span class="p">.</span><span class="n">quality</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">gpgga_msg</span><span class="p">.</span><span class="n">longitude</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">gpgga_msg</span><span class="p">.</span><span class="n">longitude_indicator</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">gpgga_msg</span><span class="p">.</span><span class="n">latitude</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">gpgga_msg</span><span class="p">.</span><span class="n">latitude_indicator</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>Die Ausgabe sieht dann Beispielsweise so aus:
+</p>
+<pre>Init ok
+1
+00920.1956E
+4844.5529N
+1
+00920.1953E
+4844.5529N
+...
+</pre>
+<p>Oder im Fall, dass noch kein GPS Fix vorhanden ist:
+</p>
+<pre>Init ok
+0
+...
+</pre>
+<h4><span id="GPS_Daten_f.C3.BCr_Google_Maps_aufbereiten"></span><span class="mw-headline" id="GPS_Daten_für_Google_Maps_aufbereiten">GPS Daten für Google Maps aufbereiten</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=13" title="Abschnitt bearbeiten: GPS Daten für Google Maps aufbereiten">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Google Maps verwendet für die Java-Script API einen Datentypen namens google.maps.LatLng(int lat, int long). Die Konvertierung erfolgt nach diesen Regeln:
+</p>
+<ul><li>Bei einem Indikator im Bereich Westen (W) bzw. Süden (S) muss dem entsprechenden Wert ein - vorangestellt werden. Siehe dazu auch <sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup></li>
+<li>Google Maps erwartet ein Format der Form DD.MMMMMM.</li></ul>
+<p>Es muss also nur das Vorzeichen angepasst werden sowie der Dezimalpunkt verschoben. Dabei bitte die Besonderheit des Längengrads beim GPS Modul auf dem Shield beachten (s.o.). Die Kennzeichnung Ost/West und Nord/Süd fällt weg.
+</p>
+<h3><span class="mw-headline" id="GSM_testen_und_verwenden">GSM testen und verwenden</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=14" title="Abschnitt bearbeiten: GSM testen und verwenden">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Die GSM Klasse verwendet die Serial1 Pins des Arduino Mega 2560 R3.
+Soll die Anwendung auf einem Uno laufen, muss die Headerdatei GSM.h der
+Bibliothek entsprechend angepasst werden (#define GSM_SERIAL Serial). Bei eingeschaltetem Debugging werden auf der seriellen Schnittstelle Serial Informaitonen ausgegeben, was gerade passiert. Für die Initialisierung und das anschließende Setup der GPRS Verbindung sieht das Log so aus wie in der angehängten Datei <a href="/articles/Datei:GSM_GPRS_Log.txt" title="Datei:GSM GPRS Log.txt">Datei:GSM GPRS Log.txt</a>. Auch diese Klasse stellt die Basis-Methoden zur nicht-blockierenden Kommunikation bereit (lesen und senden vom/an das GSM Modul) sowie einige Komfort-Methoden. Diese kümmern sich nicht nur um den zeitlichen Ablauf komplexer Operationen, sondern auch um Dinge wie Retries bei fehlgeschlagenen Kommandos, Timeout bei wiederholten Versuchen und
+das Handling eher unschöner Eigenschaften der Kommunikation. Dazu gehört z.B. dass das GSM Modul auch bis zu 2 Sekunden nach der letzten Antwort auf ein AT Kommando nochmals eine Antwort "nachschiebt". Das geschieht beispielsweise beim Setup der GPRS Verbindung, wo auf ein AT+CGAT? zunächste die Antwort "OK" kommt und erst danach CGATT: 0. Nach AT#SGACT kommen zeitversetzt noch 2 "OK" Antworten usw. Bei den Basis-Methoden ist zu beachten, dass die read_gsm_buffer Methode nicht nur Daten vom GSM Modul in den Puffer des GSM Objekts schreibt, sondern diese auch interpretiert. Eine Antwort wird dann als komplett akzeptiert, wenn sie vom GSM Modul mit &lt;CR&gt;&lt;LF&gt; beendet wurde. Darum kann diese Methode nicht zum Auslesen von anwendungsspezifischen Daten (etwa nach Anfragen an Web-Server) verwendet werden. Dazu muss direkt GSM_SERIAL verwendet werden.
+</p><p>Der öffentliche Teil der Klassendeklaration ist:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">// ...</span>
+<span class="cp">#define GSM_SERIAL Serial1</span>
+<span class="c1">// ...</span>
+<span class="n">class</span><span class="w"> </span><span class="n">GSM</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">  </span><span class="nl">public</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">GSM</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// wenn mit &gt; 0 aufgerufen, werden Debug informationen nach Serial </span>
+<span class="w">    </span><span class="c1">// geschrieben. Achtung. Serial muss vorher mit begin(baud) gestartet werden </span>
+<span class="w">    </span><span class="n">GSM</span><span class="p">(</span><span class="n">byte</span><span class="w"> </span><span class="n">debug</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// hier die SIM Pin angeben für die eingelegte Karte.</span>
+<span class="w">    </span><span class="c1">// blockierend. braucht 5-8 Sekunden. return 0 bei misserfolg.</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">sim_pin</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// gibt einmal true zurück wenn der buffer eine gültige AW des modes enthaelt. nicht blockierend.</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">read_gsm_buffer</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span>
+<span class="w">    </span><span class="c1">// achtung, gibt keine kopie zurück sondern pointer auf internen buffer</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">get_gsm_buffer</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// sendet eine SMS an die Nummer mit dem Text. Gibt 1 zurück wenn ok</span>
+<span class="w">    </span><span class="c1">// 0 bei fehler. Blockiert bis Erfolg oder 3 Fehlversuchen</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">send_SMS</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">phone_number</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">message</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// gibt den einbuchungsstatus zurück. Darf erst nach initialize aufgerufen werden</span>
+<span class="w">    </span><span class="c1">// 1 = eingebucht heimnetz, 5 eingebucht fremdnetz, andere = nicht eingeb.</span>
+<span class="w">    </span><span class="c1">// blockiert bis eine AW von GSM Modul kommt.</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="nf">get_gsm_state</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Bereitet eine Datenübertragung mit GPRS vor. </span>
+<span class="w">    </span><span class="c1">// Zugangsdaten des Providers eintragen. Erfordert initialize vorher.</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">setup_gprs</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">apn</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pwd</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// sendet die Daten aus message an den Server server auf port port</span>
+<span class="w">    </span><span class="c1">// erfordert ein vorher erfolgtes GPRS setup (setup_gprs methode)</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">send_data_via_gprs</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">server</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">port</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">message</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//...</span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>Die initialize-Methode tut das Folgende:
+</p>
+<ol><li>Der Enable Pin wird auf Low gezogen</li>
+<li>Ein Delay von 1000 ms.</li>
+<li>Der Enable-Pin wird auf High gezogen (default Pin 7, änderbar in header)</li>
+<li>Ein Delay von 2000 ms (um dem GSM Modul Zeit für Startup zu geben).</li>
+<li>Das Serial1 Interface wird mit 9600 Baud initialisiert</li>
+<li>Es werden AT Kommandos abgesetzt um das Modul in einen Zustand zu bringen, in dem es für SMS und Anrufe verwendet werden kann.
+<ol><li>AT zum prüfen der Kommunikation</li>
+<li>ATE0 zum Abschalten des Echos</li>
+<li>AT+IPR=9600 um sicherzustellen, dass das Interface mit 9600 Baud läuft</li>
+<li>AT#SIMDET=1 um die SIM Karte zu prüfen</li>
+<li>AT+CPIN? um zu prüfen ob eine SIM PIN Eingabe notwendig ist</li>
+<li>AT+CPIN=1234(1234 steht für die der Bibliothek übergeben PIN)</li>
+<li>AT+CREG? wird aufgerufen um den aktuellen Zustand der Einbuchung zu erfragen. Das ist nützlich vor allem bei der Debug-Ausgabe. Da sich das jederzeit ändern kann, muss ein Programm dass den Einbuchungsstatus benötigt diesen dann mit get_gsm_state() abfragen.</li></ol></li></ol>
+<p>Diese Schritte werden von einem Zustandsautomaten gesteuert, der festlegt welche Kommandos an das Modul gesendet werden und nach welcher Antwort es wie weitergeht.  Diese Schritte vollziehen wir zum besseren Verständniss einmal manuell nach. Dazu dient ein Beispielprogramm, welches auf dem Mega 2560 R3 läuft (denn wir brauchen 2 Serielle Interfaces, eines zum Modul und eines zum PC). Das Beispiel
+führt nur die Schritte 1 und 2 durch, danach überträgt es Daten von Serial1 nach Serial und umgekehrt. Wir geben die Kommandos dann selbst im Serial Monitor von Arduino ein und schauen das Ergebniss an. Dazu sind folgende Informationen wichtig: 
+</p>
+<ul><li>Das Modul startet mit eingeschaltetem Echo, d.h. wir sehen unser Befehle nochmals in der Konsole.</li>
+<li>Das Modul erwartet nach jedem Kommando &lt;CR&gt;&lt;LF&gt;, d.h. wir setzen im Serial Monitor die Einstellung entsprechend (rechts unten auf "sowohl NL als auch CR" setzen.</li>
+<li>Das Modul gibt seine Antwort per Defaul im "extended Mode" zurück. Das bedeutet, wir bekommen immer &lt;CR&gt;&lt;LF&gt;Antwort&lt;CR&gt;&lt;LF&gt; und damit über und unter der Antwort eine Leerzeile im Serial Monitor.</li></ul>
+<p>Das Programm für unser Experiment ist unten gelistet (verfügbar bei installierter Bibliothek in der IDE unter Datei/Beispiele/GSM_GPS/GSM_Test_ohne_lib). Das Zeichen $ verwenden wir um ein CTRL+Z zu senden.
+Der Serial Monitor kann leider keine nicht-druckbaren Zeichen senden, daher dieser Kunstgriff.
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">// KEIN include von GSM.h, weil wir die Funktion selbst nachbilden</span>
+<span class="cp">#define GSM_POWER_PIN 7</span>
+<span class="cp">#define GSM_SERIAL Serial1</span>
+<span class="cp">#define DEBUG_SERIAL Serial </span>
+<span class="w"> </span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">(){</span><span class="w"></span>
+<span class="w">  </span><span class="n">GSM_SERIAL</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">DEBUG_SERIAL</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">GSM_POWER_PIN</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">GSM_POWER_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w">    </span>
+<span class="w"> </span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span><span class="w">  </span>
+<span class="p">}</span><span class="w"></span>
+<span class="w"> </span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">(){</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">GSM_SERIAL</span><span class="p">.</span><span class="n">available</span><span class="p">()){</span><span class="w"></span>
+<span class="w">    </span><span class="n">DEBUG_SERIAL</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">GSM_SERIAL</span><span class="p">.</span><span class="n">read</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">DEBUG_SERIAL</span><span class="p">.</span><span class="n">available</span><span class="p">()){</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// handle CTRL+Z (we use $ in serial monitor</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">DEBUG_SERIAL</span><span class="p">.</span><span class="n">peek</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;$&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DEBUG_SERIAL</span><span class="p">.</span><span class="n">read</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="n">GSM_SERIAL</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">26</span><span class="p">);</span><span class="w"> </span><span class="c1">// CRTL+Z</span>
+<span class="w">    </span><span class="p">}</span><span class="k">else</span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">GSM_SERIAL</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">DEBUG_SERIAL</span><span class="p">.</span><span class="n">read</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>Nach dem Upload und Öffnen des Serial Monitors (und passend einstellen - siehe oben) prüfen wir das Modul. Dabei bezeichnet User&gt; unsere Eingaben und GSM_Modul&gt; die Antworten (&lt;CR&gt;&lt;LF&gt; lasse ich raus, daher haben wir weniger Leerzeilen). Details zu den Befehlen, besonders zur SIM Konfiguration und <a href="/index.php?title=GPRS&amp;action=edit&amp;redlink=1" class="new" title="GPRS (Seite nicht vorhanden)">GPRS</a> sowie Anrufen und SMS Versand sind nachzulesen in den Application notes oder z.B. hier<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>. 
+</p>
+<pre>User&gt;AT
+GSM_Modul&gt;AT
+GSM_Modul&gt;OK
+</pre>
+<p>Echo ausschalten
+</p>
+<pre>User&gt;ATE0
+GSM_Modul&gt;ATE0
+GSM_Modul&gt;OK
+</pre>
+<p>Test ob Echo aus ist
+</p>
+<pre>User&gt;AT
+GSM_Modul&gt;OK
+</pre>
+<p>Nach diesem Test ist die Kommunikation mit dem Modem sichergestellt. 
+</p>
+<h4><span class="mw-headline" id="Eine_SMS_versenden">Eine SMS versenden</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=15" title="Abschnitt bearbeiten: Eine SMS versenden">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div style="border: 1px solid #EEE;padding:0.5em;margin-bottom: 0.5em;">
+<p>Achtung: Beim Versand von SMS entstehen evtl. Kosten die für die jeweils verwendete SIM Karte berechnet werden!
+</p>
+</div>
+<p>Für den Versand einer SMS stellt die Bibliothek eine eigene Methode zur Verfügung. Die Methode send_SMS erwartet als Parameter die Ziel-Telefonnummer und den SMS Text (max 240 Zeichen!). Der Versand von SMS wird direkt vom Modul unterstützt und wird mit Hilfe von AT Kommandos erledigt. Es wird der Textmodus gesetzt (SMS unterstützen auch einen Datenmodus, der hier nicht verwendet wird). Bei eingeschaltetem Debugging sind die AT Kommandos und Antworten zu sehen.
+Diese Methode tut intern das folgende
+</p>
+<ol><li>Das Modul wird mit dem Kommando AT auf Verfügbarkeit geprüft</li>
+<li>Das Modul wird auf den Versand von Text-SMS eingestellt mit AT+CMGF=1</li>
+<li>Das Modul wird in SMS-Sendebereitschaft versetzt mit AT+CMGS=</li>
+<li>Der Text wird übergeben und mit CTRL+Z beendet (ASCII Zeichen 26).</li></ol>
+<p>Wenn in den Schritten oben eine unerwartete Antwort oder ein Fehler vom GSM Modul gemeldet wird, dann wird der Schritt bis zu drei mal wiederholt, danach wird die Methode abgebrochen. Am Return-Value ist der Erfolg (1) oder ein Problem (0) zu erkennen.
+</p>
+<h4><span class="mw-headline" id="GPRS_Verbindung_aufbauen_und_verwenden">GPRS Verbindung aufbauen und verwenden</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=16" title="Abschnitt bearbeiten: GPRS Verbindung aufbauen und verwenden">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div style="border: 1px solid #EEE;padding:0.5em;margin-bottom: 0.5em;">
+<p>Achtung: Beim Einsatz von GPRS Datenverbindungen entstehen ggfs. Kosten, die entsprechnend der jeweiligen SIM Karte berechnet werden. Besonders wenn kein Datentarif ("Flatrate") abgeschlossen ist, laufen hier schnell erhebliche Kosten auf. Bei diesen Experimenten ist eine Flatrate oder zumindest der Einsatz einer Pre-Paid Karte sehr zu empfehlen!
+</p>
+</div>
+<p>GRPS ist ein Dienst zur Übertragung von Paket-Daten über das GSM Netz<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup>. Dieser Dienst muss vom Netzbetreiber unterstützt werden und es werden Zugangsdaten benötigt. Die Daten umfassen einen sog. APN, einen Benutzernamen und ein Kennwort. Für die meisten Betreiber sind diese Daten nicht abhängig vom einzelnen Kunden sondern fix. Eine Liste ohne Anspruch auf Vollständigkeit ist hier zu finden <sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup> Diese Daten müssen der Bibliothek mitgeteilt werden (siehe API Funktionen). Die Bibliothek bietet zwei Methoden für die GPRS Kommunikation. Beide sind Komfort-Methoden d.h. sie blockieren bis alle Schritte durchgeführt sind. Die erste Methode setup_gprs führt das Setup durch so dass Verbindungen geöffnet werden können. Die zweite Methode dient der Kommunikation mit einem Webserver. Das Setup muss nur einmal durchgeführt werden, setzt aber eine Einbuchung im Netz voraus.
+</p><p>Die Methoden haben intern den unten beschriebenen Ablauf. Sie verwenden zur Steuerung wie die anderen Methoden eine Zustandsmaschine. Die Setup-Methode tut folgendes:
+</p>
+<ol><li>Ein Kontext wird angelegt mit der gegebenen APN und der Anforderung einer dynamischen IP durch das Kommando AT+CGDCONT = 1,"IP","&lt;APN&gt;","0.0.0.0",0,0</li>
+<li>Die Einbuchung ins GPRS Netz wird mit AT+CGATT=1 erzwungen.</li>
+<li>Es wird geprüft, ob der Kontext aktiviert werden konnte mit AT+CGATT?</li>
+<li>Wenn ins GPRS Netz eingebucht wurde (CGATT:1) wird fortgefahren (nach 3 Retries erfolgt ein Abbruch)</li>
+<li>Der Kontext wird aktiviert mit AT#SGACT = 1, 1, “&lt;USER&gt;”,”&lt;PWD&gt;”</li></ol>
+<p>Die Methode zur Kommunikation mit dem Webserver führt intern die folgenden Schritte durch
+</p>
+<ol><li>Es wird ein Socket geöffnet auf dem Port/dem Servernamen wie übergeben mit dem Kommando AT#SD=3,0,&lt;Socket&gt;,"&lt;Server_name&gt;"</li>
+<li>Der übergebene Request wird an den Server gesendet und mit &lt;CR&gt;&lt;LF&gt;&lt;CR&gt;&lt;LF&gt; abgeschlossen. Der Request muss von der Anwendung selbst aufgebaut werden. Eine Hilfestellung findet sich im Beispiel unten. Die Methode kehrt mit true zurück, wenn die Daten an den Webserver gesendet werden konnten. Die Anwendung muss nun selbst die Daten aus dem Puffer lesen und zwar ohne diese als Antworten auf AT Kommandos zu interpretieren. Das bedeutet, dass die Anwendung auf GSM_SERIAL zugreifen muss (in gsm.h definiert).</li></ol>
+<p>Das Beispielprogramm (auch zu finden unter Datei/Beispiele/GSM_GPS/GPRS_google_request) sendet mit Hilfe dieser Methoden eine Anfrage an die Google-Homepage und gibt die HTML Antwort auf Serial aus. Ein Programm, dass die Antwort vom Server verarbeiten will, muss entsprechend das HTTP Protokoll interpretieren. 
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;GSM.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SPI.h&gt;</span><span class="cp"></span>
+
+<span class="n">GSM</span><span class="w"> </span><span class="nf">gsm</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="cp">#define SIM_PIN &quot;8263&quot;</span>
+
+<span class="n">byte</span><span class="w"> </span><span class="n">init_error</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">(){</span><span class="w"></span>
+<span class="w">  </span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;init GSM starting...&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">gsm</span><span class="p">.</span><span class="n">initialize</span><span class="p">(</span><span class="n">SIM_PIN</span><span class="p">)){</span><span class="w"></span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;init GSM ok, setting up GPRS.&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="k">else</span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;init GSM error!&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w">  </span>
+
+<span class="w">  </span><span class="c1">// EIGENEN APN USER KENNWORT EINTRAGEN</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">gsm</span><span class="p">.</span><span class="n">setup_gprs</span><span class="p">(</span><span class="s">&quot;internet.eplus.de&quot;</span><span class="p">,</span><span class="s">&quot;eplus&quot;</span><span class="p">,</span><span class="s">&quot;eplus&quot;</span><span class="p">)){</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;init GPRS ok.&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">     </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;init GPRS error!&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"></span>
+<span class="w">   </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// request senden</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;sending HTTP request to google&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">gsm</span><span class="p">.</span><span class="n">send_data_via_gprs</span><span class="p">(</span><span class="s">&quot;www.google.de&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;80&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;GET /index.html HTTP/1.1</span><span class="se">\r\n</span><span class="s">Host: www.google.de</span><span class="se">\r\n\r\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// direkter Zugriff, da wir keine Interpretation des Puffers wollen</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">GSM_SERIAL</span><span class="p">.</span><span class="n">available</span><span class="p">()){</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">GSM_SERIAL</span><span class="p">.</span><span class="n">read</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<h3><span class="mw-headline" id="Die_Zustandsmaschine_der_Bibliothek">Die Zustandsmaschine der Bibliothek</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=17" title="Abschnitt bearbeiten: Die Zustandsmaschine der Bibliothek">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:402px;"><a href="/articles/Datei:Bild1.png" class="image"><img alt="" src="https://www.mikrocontroller.net/wikifiles/thumb/2/25/Bild1.png/400px-Bild1.png" decoding="async" width="400" height="278" class="thumbimage" srcset="https://www.mikrocontroller.net/wikifiles/thumb/2/25/Bild1.png/600px-Bild1.png 1.5x, https://www.mikrocontroller.net/wikifiles/thumb/2/25/Bild1.png/800px-Bild1.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/articles/Datei:Bild1.png" class="internal" title="vergrößern"></a></div>Auszug aus dem Zustandsautomaten der GSM Bibliothek. Zwischenzustände (z.B. Zustand 3) sind entfernt worde um die Übersichtlichkeit zu erhöhen.</div></div></div>
+<p>Die Bibliothek funktioniert intern für die GSM Abläufe mit einem sog. Zustandsautomaten (engl <a href="/articles/Statemachine" title="Statemachine">Statemachine</a>). Dieser ist so konfiguriert, dass je nach aktuellem Zustand und Antwort des GSM Moduls ein neuer Zustand erreicht wird. Es sind Zustandsautomaten definiert für die Initialisierung des Moduls sowie für den Versand einer SMS. Für die Initialisierungsmethode ist dies Auszugsweise im Diagram rechts dargestellt. Sollen eigene Abläufe modelliert werden, kann dies auch mit dem Zustandsautomaten geschehen. Wichtig ist: der Zustandsautomat reagiert mit einer Zustandsänderung auf eingegeben Strings. Das Absetzen des nächsten Kommandos an das GSM Modul ist Aufgabe des Programms. Der Zustandsautomat unterstützt selbst geschriebene Funktionen zum prüfen, ob eine Antworte-Zeile passt. Dies wird über Funktionszeiger realisiert, die beim Setup mitgegeben werden (der letzte Parameter in der add_transition Methode). Dazu sind bereits drei Methoden vordefiniert, die verwendet werden können. Diese Methoden prüfen den Eingangsstring auf einen Treffer am Anfang bzw. am Ende oder geben immer einen Treffer zurück. Das öffentliche Interface der Klasse sieht so aus.
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">//...</span>
+<span class="c1">// Type eigener Matchingfunktion. </span>
+<span class="c1">// Gibt&#160;!= 0 zurück bei Treffer. Erster Parameter ist fixer Vergleichsstring.</span>
+<span class="c1">// Zweiter Parameter ist die Zeile, die von aussen übergeben wird.</span>
+<span class="k">typedef</span><span class="w">  </span><span class="n">byte</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">match_func</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// ...</span>
+<span class="n">class</span><span class="w"> </span><span class="n">State_Machine</span><span class="w"> </span><span class="p">{</span><span class="w">     </span>
+<span class="w">  </span><span class="nl">public</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Abfrage des aktuellen Status</span>
+<span class="w">    </span><span class="n">byte</span><span class="w"> </span><span class="n">get_state</span><span class="p">();</span><span class="w"> </span>
+
+<span class="w">    </span><span class="c1">// Status manuell setzen</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">set_state</span><span class="p">(</span><span class="n">byte</span><span class="w"> </span><span class="n">state</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Die Eingabezeile wird den Zustandsübergängen übergeben. Bei einem</span>
+<span class="w">    </span><span class="c1">// Treffer (abhängig von der jeweils konfigurierten Funktion und dem </span>
+<span class="w">    </span><span class="c1">// Startzustand) wird der neue Zustand zurückgegeben. 0 bei keinem Treffer</span>
+<span class="w">    </span><span class="n">byte</span><span class="w"> </span><span class="nf">match_line</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">line</span><span class="p">);</span><span class="w"> </span>
+
+<span class="w">    </span><span class="c1">// Zustandsübergang hinzufügen. Bei Zustand start_state findet bei einem</span>
+<span class="w">    </span><span class="c1">// erfolgreichen Vergleich von trigger_line mit der Eingabezeile ein </span>
+<span class="w">    </span><span class="c1">// Übergang nach next_state statt. Die Vergleichsfunktion prüft</span>
+<span class="w">    </span><span class="c1">// per Default auf gleichen Beginn des Strings. Kann durch eigene</span>
+<span class="w">    </span><span class="c1">// Funktionszeiger ersetzt werden (siehe typedef oben).</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">add_transition</span><span class="p">(</span><span class="n">byte</span><span class="w"> </span><span class="n">start_state</span><span class="p">,</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="n">next_state</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">trigger_line</span><span class="p">,</span><span class="w"> </span><span class="n">match_func</span><span class="w"> </span><span class="n">f</span><span class="p">);</span><span class="w"> </span>
+
+<span class="w">    </span><span class="c1">// Vordefinierte Funktionen für matching. </span>
+<span class="w">    </span><span class="c1">// Treffer bei gleichem Start</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="nf">compare_lines_leading</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">trigger_line</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">input_line</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Treffer bei gleichem Ende</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="nf">compare_lines_trailing</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">trigger_line</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">input_line</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Immer Treffer</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="nf">compare_lines_allways_match</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">trigger_line</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">input_line</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//...</span>
+</pre></div>
+<h4><span class="mw-headline" id="Verwendung_der_Zustandsmaschine_am_Beispiel_der_initialize_Methode_des_GSM_Moduls">Verwendung der Zustandsmaschine am Beispiel der initialize Methode des GSM Moduls</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=18" title="Abschnitt bearbeiten: Verwendung der Zustandsmaschine am Beispiel der initialize Methode des GSM Moduls">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Zunächst die Funktion, mit der auf einen Treffer in der AW des Moduls geprüft wird. Standardmäßig wir auf einen Treffer am Anfang des Strings geprüft, wir brauchen aber einen Test auf das Ende des Strings. Daher wird die Methode static byte compare_lines_trailing(char * trigger_line, char * input_line) verwendet. Unten ein Auszug des Bibliotheks-Codes, der die Maschine konfiguriert und dann die Kommandos entsprechend der Zustände absetzt (Achtung, nur zur Demonstration, nicht direkt so ausserhalb
+der Klasse nutzbar!). Was hier auch zu sehen ist: Da die Zustandsmaschine generisch einsetzbar sein soll, kümmert sie sich nicht um Timings. Die GSM Klasse selbst muss abhängig vom Zustand für Pausen sorgen. Ebenfalls zu sehen ist, wie die GSM Klasse auf Meldungen des GSM Moduls reagiert, bei denen einfach nochmal probiert werden muss. Dies geschieht durch einen Übergang eines Zustands auf sich selbst und eine Erkennung dieses Spezialfalls. Zuerst das Setup der Zustandsmaschine und die Liste der Befehle, die an das GSM Modul gehen. Danach kommen einige Steuervariablen und dann der Teil zum Senden von Kommandos abhängig vom Zustand. Danach die Übergabe der Antwort an die Maschine und die Auswertung der nächsten Aktion (Retry, neues Kommando, keine Aktion).
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">//.....</span>
+<span class="c1">// befehle und setup der zustandsmaschine</span>
+<span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">init_commands</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;AT</span><span class="se">\r</span><span class="s">&quot;</span><span class="p">,</span><span class="s">&quot;ATE0</span><span class="se">\r</span><span class="s">&quot;</span><span class="p">,</span><span class="s">&quot;AT+IPR=9600</span><span class="se">\r</span><span class="s">&quot;</span><span class="p">,</span><span class="s">&quot;AT#SIMDET=1</span><span class="se">\r</span><span class="s">&quot;</span><span class="p">,</span><span class="s">&quot;AT+CPIN?</span><span class="se">\r</span><span class="s">&quot;</span><span class="p">,</span><span class="n">pin_setting_command</span><span class="p">,</span><span class="s">&quot;AT+CREG?</span><span class="se">\r</span><span class="s">&quot;</span><span class="p">};</span><span class="w"></span>
+<span class="w">  </span><span class="n">init_sm</span><span class="p">.</span><span class="n">add_transition</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s">&quot;OK&quot;</span><span class="p">,</span><span class="n">State_Machine</span><span class="o">::</span><span class="n">compare_lines_trailing</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">init_sm</span><span class="p">.</span><span class="n">add_transition</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s">&quot;OK&quot;</span><span class="p">,</span><span class="n">State_Machine</span><span class="o">::</span><span class="n">compare_lines_trailing</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">init_sm</span><span class="p">.</span><span class="n">add_transition</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="s">&quot;OK&quot;</span><span class="p">,</span><span class="n">State_Machine</span><span class="o">::</span><span class="n">compare_lines_trailing</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">init_sm</span><span class="p">.</span><span class="n">add_transition</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="s">&quot;OK&quot;</span><span class="p">,</span><span class="n">State_Machine</span><span class="o">::</span><span class="n">compare_lines_trailing</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">init_sm</span><span class="p">.</span><span class="n">add_transition</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="s">&quot;SIM PIN&quot;</span><span class="p">,</span><span class="n">State_Machine</span><span class="o">::</span><span class="n">compare_lines_trailing</span><span class="p">);</span><span class="w"> </span><span class="c1">// PIN nicht gesetzt, setzen</span>
+<span class="w">  </span><span class="n">init_sm</span><span class="p">.</span><span class="n">add_transition</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="s">&quot;ERROR&quot;</span><span class="p">,</span><span class="n">State_Machine</span><span class="o">::</span><span class="n">compare_lines_trailing</span><span class="p">);</span><span class="w"> </span><span class="c1">// einfach nochmal versuchen</span>
+<span class="w">  </span><span class="n">init_sm</span><span class="p">.</span><span class="n">add_transition</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s">&quot;READY&quot;</span><span class="p">,</span><span class="n">State_Machine</span><span class="o">::</span><span class="n">compare_lines_trailing</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin schon gesetzt</span>
+<span class="w">  </span><span class="n">init_sm</span><span class="p">.</span><span class="n">add_transition</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s">&quot;OK&quot;</span><span class="p">,</span><span class="n">State_Machine</span><span class="o">::</span><span class="n">compare_lines_trailing</span><span class="p">);</span><span class="w"> </span>
+<span class="w">  </span><span class="n">init_sm</span><span class="p">.</span><span class="n">set_state</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span>
+<span class="n">byte</span><span class="w"> </span><span class="n">last_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="n">byte</span><span class="w"> </span><span class="n">command_sent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="n">byte</span><span class="w"> </span><span class="n">retries</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="n">byte</span><span class="w"> </span><span class="n">abort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// ENDE TEIL 1</span>
+</pre></div>
+<p>Jetzt ist die Statemachine bereit und im Startzustand. Die Kommandos, die je nach Zustand an das GSM Modul gehen sind als Array definiert, so dass Sie zu den Zuständen passen. init_commands[X] enthält das Kommando, das in Zustand X an das Modul gesendet wird. Jetzt kann die Maschine in einer Schleife verwendet werden bis der letzte Zustand erreicht ist oder aufgrund von wiederholt fehlgeschlagenen Versuchen abgebrochen wird. Fehlgeschlagen ist ein Kommando dann, wenn die Antwort gar nicht erkannt wird oder wenn die Antwort von Zustand X explizit wieder zu Zustand X führt.
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">// TEIL 2 - hier geht es weiter</span>
+<span class="k">while</span><span class="p">(</span><span class="n">init_sm</span><span class="p">.</span><span class="n">get_state</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">abort</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// sende-teil richtung GSM Modul</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">command_sent</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">init_commands</span><span class="p">[</span><span class="n">init_sm</span><span class="p">.</span><span class="n">get_state</span><span class="p">()];</span><span class="w"></span>
+<span class="w">    </span><span class="n">send_command</span><span class="p">(</span><span class="n">command</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">command_sent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span>
+<span class="w">  </span><span class="c1">// leseteil und übergabe an state-machine  </span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">read_gsm_buffer</span><span class="p">()){</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// wir haben eine Antwort bekommen</span>
+<span class="w">    </span><span class="c1">// prüfen ob neuer Zustand</span>
+<span class="w">    </span><span class="n">last_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">init_sm</span><span class="p">.</span><span class="n">get_state</span><span class="p">();</span><span class="w"></span>
+<span class="w">		</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">init_sm</span><span class="p">.</span><span class="n">match_line</span><span class="p">(</span><span class="n">get_gsm_buffer</span><span class="p">())){</span><span class="c1">// Zustandsübergang hat stattgefunden, match gefunden</span>
+<span class="w">      </span><span class="c1">// ist der alte zustand = dem neuen?</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">last_state</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">init_sm</span><span class="p">.</span><span class="n">get_state</span><span class="p">()){</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// ja. zuviele retries?</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">retries</span><span class="o">++</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">MAX_RETRY_AT_COMMAND</span><span class="p">){</span><span class="w"></span>
+<span class="w">	  </span><span class="n">abort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">500</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">retries</span><span class="p">);</span><span class="w"> </span><span class="c1">// 500ms mal anzahl retries warten bis neuer versuch			</span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// reset retry auf 0</span>
+<span class="w">        </span><span class="n">retries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// im nächsten loop passendes commando senden!</span>
+<span class="w">      </span><span class="n">command_sent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// ende des reads und zustandsübergangs</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span>
+<span class="c1">//.....</span>
+</pre></div>
+<p>Mit der Kentniss der internen Programmierung kann nun auch die Ausgabe des Debug-Modus verstanden werden. Die Debug-Aufrufe der Bibliothek sind aus dem Code oben aus Platzgründen entfernt. Mit dem Beispiel unter Datei/Beispiele/GSM_GPS/GSM_Beispiel_mit_lib kann aber der Ablauf nachvollzogen werden. Dort ist der Debug-Modus aktiviert und eine Ausgabe auf der Konsole zeigt folgendes (hier etwas umformatiert):
+</p>
+<pre>STATE:1
+Command:AT
+AW:
+AW:OK
+
+STATE:2
+Command:ATE0
+AW:ATE0 
+AW:OK
+
+STATE:3
+Command:AT+IPR=9600
+AW:OK
+
+STATE:4
+Command:AT#SIMDET=1
+AW:OK
+
+STATE:5
+Command:AT+CPIN?
+AW:ERROR
+
+STATE:5
+Command:AT+CPIN?
+AW:ERROR
+
+STATE:5
+Command:AT+CPIN?
+AW:+CPIN: SIM PIN
+
+STATE:6
+Command:AT+CPIN=8263
+AW:OK
+</pre>
+<h4><span class="mw-headline" id="Verwendung_der_Zustandsmaschine_in_eigenen_Programmen">Verwendung der Zustandsmaschine in eigenen Programmen</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=19" title="Abschnitt bearbeiten: Verwendung der Zustandsmaschine in eigenen Programmen">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Für die Verwendung der Zustandsmaschine in eigenen Programmen ist ein Beispiel zu finden unter Datei/Bespiele/GSM_GPS/State_Machine_Demo. Dieses Demo-Programm wartet auf Strings vom seriellen Interface Serial und reagiert dann entsprechend seiner Zustandsmaschine. Es eignet sich gut für eigene Experimente. Der Code ist hier aus Platzgründen nicht gelistet. Mit diesem Code kann man mit dem Serial Monitor nun seine Zustandsmaschine testen. Bitte den Serial Monitor so einstellen, dass ein &lt;CR&gt;&lt;LF&gt; gesendet wird (Settings rechts unten). Dann kann ein Test durchgeführt werden, indem Strings an das Programm gesendet werden. Spielen Sie einfach ein wenig damit!
+</p>
+<h2><span class="mw-headline" id="Beispiel_zur_Kombination_von_GSM_und_GPS">Beispiel zur Kombination von GSM und GPS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=20" title="Abschnitt bearbeiten: Beispiel zur Kombination von GSM und GPS">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Dieses Beispiel bringt die einzelnen Teile nun zusammen. Es wird ein Programm geschrieben, dass auf Tastendruck die aktuellen GPS Koordinaten per SMS an eine Nummer verschickt. Das Beispiel ist vorhanden unter Datei/Beispiele/GSM_GPS/Send_GPS_as_SMS. Es müssen Anpassungen vorgenommen werden (siehe unten). Debugging auf der seriellen Schnittstelle Serial ist eingeschaltet,
+das kann ausgeschaltet werden, indem der Konstruktor ohne Parameter der Klasse GSM verwendet wird. Im Beispiel wird am Anfang der loop() Schleife die LED auf dem Shield eingeschaltet und am Ende der Schleife wieder aus. Man kann also an den Phase in denen die LED eingeschaltet ist sehen, wenn das Programm in der Schleife beschäftigt ist (eine blockierende Komfort-Funktion aufgerufen ist). Aus Platzgründen ist das Programm hier nicht komplett dargestellt sondern nur besonders interessante Teile. Im oberen Teil des Quellcodes muss die Zielnummer und die PIN der verwendeten SIM Karte eingetragen werden.
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">// ...</span>
+<span class="c1">// GSM gsm; // ohne Debug-Ausgaben</span>
+<span class="n">GSM</span><span class="w"> </span><span class="nf">gsm</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// mit Debug Ausgaben</span>
+<span class="c1">// ...</span>
+<span class="cp">#define PHONE &quot;0172999999&quot; </span><span class="c1">// durch eigene Nummer ersetzen!</span>
+<span class="cp">#define SIM_PIN &quot;8263&quot; </span><span class="c1">// durch eigene SIM PIN ersetzen</span>
+<span class="c1">// ....</span>
+</pre></div>
+<p>Weiter unten fällt dem Leser vielleicht auf, dass die Abfrage des Tasters nicht explizit entprellt ist. Da wir jedoch Komfort-Funktionen nutzen (wenn die Taste gedrückt wird warten wir zuerst auf eine Rückmeldung vom GPS Modul) und diese eine Verzögerung bewirken, wird dadurch sozusagen implizit entprellt. Es wird keine SMS gesendet, wenn das GPS Modul noch keine Positionsdaten liefern kann. Die Funktion construct_message ist hier nicht dargestellt. Sie bringt die Daten aus der Struktur nmae_gpgga_message in eine gut lesbare Form für den SMS Versand.
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">//.... in der Loop-Funktion</span>
+<span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">gps</span><span class="p">.</span><span class="n">check_switch</span><span class="p">(</span><span class="n">GPS_SWITCH_1</span><span class="p">)){</span><span class="w"></span>
+<span class="w">     </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Switch pressed&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">nmae_gpgga_message</span><span class="w"> </span><span class="n">gps_msg</span><span class="p">;</span><span class="w"></span>
+<span class="w">     </span><span class="c1">// warten auf die GPS information</span>
+<span class="w">    </span><span class="n">gps</span><span class="p">.</span><span class="n">get_next_gps_position</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gps_msg</span><span class="p">);</span><span class="w"></span>
+<span class="w">     </span>
+<span class="w">     </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;GPS Quality:&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">     </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">gps_msg</span><span class="p">.</span><span class="n">quality</span><span class="p">);</span><span class="w"></span>
+<span class="w">     </span><span class="c1">// haben wir einen GPS fix?</span>
+<span class="w">     </span><span class="k">if</span><span class="p">(</span><span class="n">gps_msg</span><span class="p">.</span><span class="n">quality</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">){</span><span class="w"></span>
+<span class="w">       </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;No GPS Fix yet&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">     </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="c1">// wir haben einen GPS Fix</span>
+<span class="w">       </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;GPS:&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">       </span><span class="kt">char</span><span class="w"> </span><span class="n">sms</span><span class="p">[</span><span class="mi">240</span><span class="p">];</span><span class="w"></span>
+<span class="w">       </span><span class="n">construct_message</span><span class="p">(</span><span class="n">sms</span><span class="p">,</span><span class="n">gps_msg</span><span class="p">);</span><span class="w"></span>
+<span class="w">       </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">sms</span><span class="p">);</span><span class="w"></span>
+<span class="w">       </span><span class="k">if</span><span class="p">(</span><span class="n">gsm</span><span class="p">.</span><span class="n">send_SMS</span><span class="p">(</span><span class="n">PHONE</span><span class="p">,</span><span class="n">sms</span><span class="p">)){</span><span class="w"></span>
+<span class="w">         </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Done sending SMS&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">       </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;ERROR sending SMS&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">       </span><span class="p">}</span><span class="w"></span>
+<span class="w">     </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w">  </span>
+<span class="c1">// ....</span>
+</pre></div>
+<h2><span class="mw-headline" id="Fazit_und_Ausblick">Fazit und Ausblick</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=21" title="Abschnitt bearbeiten: Fazit und Ausblick">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Mit Hilfe des GSM/GPS Shields von Antrax sowie anderer Shields mit ähnlichen Chips können relativ einfach Anwendungen gebaut werden, die sowohl Positionsbestimmung als auch Online-Kommunikation erfordern. Auf einem Arduino Uno ist die Kommunikation mit dem GSM Modul etwas unschön, da sich die Pins mit der USB Kommunikation überschneiden. Für einfaches Debugging und das ausprobieren von AT Kommandos bietet sich daher der Einsatz eines Arduino Mega 2560 an. 
+</p><p>Aufbauend auf der Biliothek können schnell eigene, einfache Anwendungen entwickelt werden. Insbesondere die Zustandsmaschine, in Verbindung mit den Methoden die den direkten Datenaustausch mit den Modulen zulassen, bietet eine Basis für eigene Erweiterungen. 
+</p><p>Ein möglicher Folgeartikel könnte die  Voice-Funktionen des Telit Moduls beschreiben. Die Bibliothek könnte um Methoden ergänzt werden, die noch mehr der internen Funktion kapseln. Für die GPS Bibliothek sind weiter Methoden denkbar, welche die Daten in andere Formen bringen (beispielsweis ins Google-Earth Format oder in eine Form für die Speicherung in KML Files). Die Komfort-Methoden können generell in einer weiteren Variante entwickelt werden so dass auch diese nicht blockieren. Da die Bibliothek frei zugänglich und unter einer Open-Source Lizenz verfügbar ist, sind Erweiterungen und Anpassungen sehr willkommen.
+</p>
+<h2><span class="mw-headline" id="FAQ">FAQ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=22" title="Abschnitt bearbeiten: FAQ">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Q: Das Shield antwortet nicht auf meine Kommandos. Ich sehe aber Ausgaben im Serial Monitor. <br />
+A: Ist der Serial Monitor so eingestellt, dass auch CR und NL gesendet werden? Setting ist rechts unten.
+</p><p>Q: Ich bekomme vom GPS immer eine Quality von 0<br />
+A: Es kann besonders zu Beginn eine Weile dauern, bis das Shield einen GPS Fix hat. Wenn sich auch nach 5 Minuten nichts tut, versuche es im Freien. Wenn sich auch da nach 5 Minunten nichts tut könnte ein Fehler vorliegen. Dann würde ich auf den Hersteller zugehen.
+</p><p>Q: Ich kann per GPRS keine Verbindung aufbauen, sondern sehe in den Debug-Ausgaben immer ERROR nach dem Kommando AT#SD=3,0,8080,"x.x.x.x"<br />
+A: Prüfe die Daten für APN, User und Kennwort. Diese werden oft zunächst akzeptiert, dann kommt es aber zum Fehler beim Connect.
+</p><p>Q: AT+CGATT=1 ergibt immer einen Fehler (Antwort ERROR). <br />
+A: Die Einbuchung ins GPRS Netz funktioniert nicht. Prüfen Sie mit der SIM Karte und einem Handy, ob überhaupt GPRS für die Karte funktioniert und an dem Ort Empfang gegeben ist.
+</p><p>Q: Ich bekomme Compile-Fehler mit Bezug zu SPI, etwa
+</p>
+<pre>C:\opt\arduino-1.0.3\libraries\GSM_GPS\GPS.cpp:43: error: 'SPI' was not declared in this scope
+C:\opt\arduino-1.0.3\libraries\GSM_GPS\GPS.cpp:43: error: 'SPI_MODE0' was not declared in this scope
+...
+</pre>
+<p>A: Includiere SPI.h im Sketch. Das Problem kann auch auftauchen wenn nur GSM verwendet wird, da der Arduino-Build immer die ganze Library baut und damit auch den GPS Teil.
+</p>
+<h2><span class="mw-headline" id="Einzelnachweise_und_Downloads">Einzelnachweise und Downloads</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;action=edit&amp;section=23" title="Abschnitt bearbeiten: Einzelnachweise und Downloads">Bearbeiten</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">Shield Bezug <a rel="nofollow" class="external text" href="http://www.antrax.de/site/Onlineshop/Home/Arduino-Komponenten/GSM-GPRS-GPS-Shield::51.html">GSM/GPS Shield im Antrax Online-Shop</a></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">Antrax GPS/GSM bei Shieldlist <a rel="nofollow" class="external text" href="http://shieldlist.org/antrax/gsm-gprs-gps">Shieldlist</a></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">Forenbeitrag zum Shield und Arduino Uno<a class="external text" href="http://www.mikrocontroller.net/topic/287212#new">Forenbeitrag</a></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">Telit GE865-QUAD Datenblätter und Guides <a rel="nofollow" class="external text" href="http://www.telit.com/en/products.php?p_id=3&amp;p_ac=show&amp;p=47">Telit GE865-QUAD Product Page</a></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text">Fastrax UP501 Datenblätter und Guides<a rel="nofollow" class="external text" href="http://www.u-blox.com/en/positioning-antennas/gnss-antenna-modules/up501-gps-antenna-module.html">Fastrax UP501 Product Homepage</a></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">Artikel zu Arduino und Zeit-Programmierung <a rel="nofollow" class="external text" href="http://macherzin.net/article34-Arduino-Software-Zeit">Tutorial: Arduino und Zeit</a></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">GPGGA Dokumentation<a rel="nofollow" class="external text" href="http://www.hemispheregps.com/gpstechinfo/GPGGA.htm">GPGGA Dokumentation</a></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">Latitude und Longitude<a rel="nofollow" class="external text" href="http://www.satsig.net/lat_long.htm">Latitude and Longitude</a></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">GSM AT Kommandos <a rel="nofollow" class="external text" href="http://www.nobbi.com/atgsm.html">GSM AT Kommandos</a></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><a href="#cite_ref-10">↑</a></span> <span class="reference-text">GPRS <a rel="nofollow" class="external text" href="http://de.wikipedia.org/wiki/General_Packet_Radio_Service">Wikipedia zu GPRS</a></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><a href="#cite_ref-11">↑</a></span> <span class="reference-text">GPRS Zugangsdaten<a rel="nofollow" class="external text" href="http://www.ipaddatentarife.de/apn-einstellungen-fur-das-ipad">GPRS Zugangsdaten für deutsche Provider</a></span>
+</li>
+</ol></div>
+<p><a href="/articles/Datei:GSM_GPS.zip" title="Datei:GSM GPS.zip">Datei:GSM GPS.zip</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220605211535
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.172 seconds
+Real time usage: 3.347 seconds
+Preprocessor visited node count: 332/1000000
+Post‐expand include size: 232/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 63449/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    6.336      1 Vorlage:Wettbewerb_Header
+100.00%    6.336      1 -total
+-->
+
+<!-- Saved in parser cache with key uc_wiki:pcache:idhash:7451-0!canonical and timestamp 20220605211532 and revision id 96443. Serialized with JSON.
+ -->
+</div></div>			<!-- /bodycontent -->
+						<!-- printfooter -->
+			<div class="printfooter">
+			Abgerufen von „<a dir="ltr" href="https://www.mikrocontroller.net/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;oldid=96443">https://www.mikrocontroller.net/index.php?title=Antrax_GPS/GSM/GPRS_Shield&amp;oldid=96443</a>“			</div>
+			<!-- /printfooter -->
+									<!-- catlinks -->
+			<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/articles/Spezial:Kategorien" title="Spezial:Kategorien">Kategorien</a>: <ul><li><a href="/articles/Kategorie:Wettbewerb" title="Kategorie:Wettbewerb">Wettbewerb</a></li><li><a href="/articles/Kategorie:AVR-Projekte" title="Kategorie:AVR-Projekte">AVR-Projekte</a></li><li><a href="/articles/Kategorie:GPS" title="Kategorie:GPS">GPS</a></li><li><a href="/articles/Kategorie:AVR-Boards" title="Kategorie:AVR-Boards">AVR-Boards</a></li></ul></div></div>			<!-- /catlinks -->
+									<div class="visualClear"></div>
+			<!-- debughtml -->
+						<!-- /debughtml -->
+
+      <div class="visualClear"></div>
+    </div>
+	</div>
+  </div></td>
+  <!-- google_ad_section_end -->
+      </tr>
+      </table>
+      <!--
+      <div class="visualClear"></div>
+      <div id="footer" style="clear:both">
+    <div id="f-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/resources/assets/poweredby_mediawiki_88x31.png" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" height="31" width="88" alt="Powered by MediaWiki" loading="lazy" /></a></div>		<ul id="f-list">
+	  <li id="f-lastmod"> Diese Seite wurde zuletzt am 29. Mai 2017 um 06:56 Uhr bearbeitet.</li>	  	  	  	  <li id="f-about"><a href="/articles/Mikrocontroller.net:%C3%9Cber_Mikrocontroller.net" title="Mikrocontroller.net:Über Mikrocontroller.net">Über Mikrocontroller.net</a></li>	  <li id="f-disclaimer"><a href="/articles/Mikrocontroller.net:Impressum" title="Mikrocontroller.net:Impressum">Haftungsausschluss</a></li>	</ul>
+      </div>-->
+    </div>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.172","walltime":"3.347","ppvisitednodes":{"value":332,"limit":1000000},"postexpandincludesize":{"value":232,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":63449,"limit":5000000},"timingprofile":["100.00%    6.336      1 Vorlage:Wettbewerb_Header","100.00%    6.336      1 -total"]},"cachereport":{"timestamp":"20220605211535","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":105});});</script></div>
+
+  </body>
+</html>
