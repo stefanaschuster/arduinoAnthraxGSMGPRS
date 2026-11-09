@@ -1,0 +1,13 @@
+arduinoanthraxgsmgprs
+Copyright 2013 Stefan A. Schuster
+
+This product includes software developed by Stefan A. Schuster
+(https://github.com/stefanaschuster/arduinoanthraxgsmgprs).
+
+Excluded from this license:
+
+GPRS_Shield.html and GPRS_Shield.pdf are copies of the article
+"Antrax GPS/GSM/GPRS Shield" from the mikrocontroller.net article
+collection (https://www.mikrocontroller.net/articles/Antrax_GPS/GSM/GPRS_Shield).
+They are provided for reference only and are not covered by the
+Apache License 2.0 of this repository.
